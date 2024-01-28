@@ -1,5 +1,4 @@
 @import './variebles.scss';
-@import './container.scss';
 
 * {
   box-sizing: border-box;
@@ -64,5 +63,23 @@ button {
   &:hover {
     cursor: pointer;
     opacity: 0.7;
+  }
+}
+.container {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1600px;
   }
 }

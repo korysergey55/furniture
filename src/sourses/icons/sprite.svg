@@ -21,6 +21,9 @@
 <symbol id="icon-menu-hamburger" viewBox="0 0 47 32">
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4.3636" d="M1.96 29.154h42.965M1.96 15.615h42.965M1.96 2.077h42.965"></path>
 </symbol>
+<symbol id="icon-modal-close" viewBox="0 0 32 32">
+<path d="M26.667 7.303l-1.97-1.97-7.808 7.808-7.808-7.808-1.97 1.97 7.808 7.808-7.808 7.808 1.97 1.97 7.808-7.808 7.808 7.808 1.97-1.97-7.808-7.808 7.808-7.808z"></path>
+</symbol>
 <symbol id="icon-logo" viewBox="0 0 68 32">
 <path fill="#221e1f" style="fill: var(--color1, #221e1f)" d="M0 31.985h68.393v-31.984h-68.393v31.984z"></path>
 <path fill="#fddc66" style="fill: var(--color2, #fddc66)" d="M1.17 31.132h66.054v-30.278h-66.054v30.278z"></path>

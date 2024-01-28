@@ -4,7 +4,6 @@ const App = () => {
   return (
     <>
       <Header></Header>
-      <h2>Furniture</h2>
     </>
   );
 }

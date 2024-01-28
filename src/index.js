@@ -7,6 +7,7 @@ import './index.css'
 import 'normalize.css'
 import './sourses/styles/styles.scss'
 
+
 import App from './Components/App/App';
 
 const root = ReactDOM.createRoot(
