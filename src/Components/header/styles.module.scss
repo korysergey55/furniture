@@ -1,0 +1,61 @@
+.header {
+  height: 72px;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    .logo {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: 0.32px;
+      color: black;
+    }
+    .nav_list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      .nav_link {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: 0.32px;
+        color: black;
+      }
+    }
+
+    .social_list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      .icon {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    .contacts {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      .link {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.32px;
+        color: #434455;
+      }
+    }
+  }
+}
