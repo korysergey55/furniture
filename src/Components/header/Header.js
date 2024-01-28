@@ -1,29 +1,23 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { useNavigate, useLocation, NavLink } from 'react-router-dom'
+import { useLocation, NavLink } from 'react-router-dom'
 
 import styles from './styles.module.scss'
 import sprite from '../../sourses/icons/sprite.svg'
 import classnames from 'classnames'
 
 const Header = () => {
-  const navigate = useNavigate();
   const location = useLocation()
   const [state, setState] = useState(false)
 
-  // useEffect(() => {
-  //   console.log(state)
-  // }, [state])
-
   useEffect(() => {
-    handleMenu()
+    if (!state) handleMenu()
   }, [location.pathname])
 
 
   const handleMenu = () => {
     setState(!state)
   }
-
 
   return (
     <div className={styles.header}>
@@ -38,18 +32,16 @@ const Header = () => {
             <NavLink
               to='/'
               exact={true}
-              className={styles.nav_link}
-              activeClassName={styles.nav_link_active}
+              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
             >
               Home
             </NavLink>
           </li>
           <li className={styles.item}>
             <NavLink
-              to='/'
+              to='/about'
               exact={true}
-              className={styles.nav_link}
-              activeClassName={styles.nav_link_active}
+              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
             >
               About us
             </NavLink>
@@ -58,8 +50,7 @@ const Header = () => {
             <NavLink
               to='/products'
               exact={true}
-              className={styles.nav_link}
-              activeClassName={styles.nav_link_active}
+              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
             >
               Products
             </NavLink>
@@ -68,14 +59,12 @@ const Header = () => {
             <NavLink
               to='/contacts'
               exact={true}
-              className={styles.nav_link}
-              activeClassName={styles.nav_link_active}
+              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
             >
               Contacts
             </NavLink>
           </li>
         </ul>
-
         <div className={classnames({
           [styles.nav_wripper_mobile]: true,
           [styles.nav_wripper_mobile_show]: state
@@ -91,8 +80,8 @@ const Header = () => {
               <NavLink
                 to='/'
                 exact={true}
-                className={styles.nav_link}
-                activeClassName={styles.nav_link_active}
+                className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+                onClick={handleMenu}
               >
                 Home
               </NavLink>
@@ -101,8 +90,8 @@ const Header = () => {
               <NavLink
                 to='about'
                 exact={true}
-                className={styles.nav_link}
-                activeClassName={styles.nav_link_active}
+                className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+                onClick={handleMenu}
               >
                 About us
               </NavLink>
@@ -111,8 +100,8 @@ const Header = () => {
               <NavLink
                 to='/products'
                 exact={true}
-                className={styles.nav_link}
-                activeClassName={styles.nav_link_active}
+                className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+                onClick={handleMenu}
               >
                 Products
               </NavLink>
@@ -121,15 +110,14 @@ const Header = () => {
               <NavLink
                 to='/contacts'
                 exact={true}
-                className={styles.nav_link}
-                activeClassName={styles.nav_link_active}
+                className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+                onClick={handleMenu}
               >
                 Contacts
               </NavLink>
             </li>
           </ul>
         </div>
-
         <ul className={styles.social_list}>
           <li className={styles.item}>
             <a className={styles.link}
@@ -163,7 +151,6 @@ const Header = () => {
             </a>
           </li>
         </ul>
-
         <button
           className={classnames({
             [styles.button_menu_hamburger]: true,
@@ -177,25 +164,17 @@ const Header = () => {
             <use href={sprite + '#icon-menu-hamburger'}></use>
           </svg>
         </button>
-
-        <ul className={styles.contacts}>
-          <li className={styles.item}>
-            <a className={styles.link}
-              href={`tel:+44 734166645`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >+44 734166645
-            </a>
-          </li>
-          <li className={styles.item}>
-            <a className={styles.link}
-              href={`mailto:furniture@gmail.com`}
-              target="_blank"
-              rel="noopener noreferrer">
-              furniture@gmail.com
-            </a>
-          </li>
-        </ul>
+        <div className={styles.contacts}>
+          <a className={styles.link}
+            href={`tel:+44 734166645`}
+            target="_blank"
+            rel="noopener noreferrer"
+          > <svg className={styles.icon} aria-label="telephone icon">
+              <use href={sprite + '#icon-tel'}></use>
+            </svg>
+            +44 734166645
+          </a>
+        </div>
       </div>
     </div>
   );

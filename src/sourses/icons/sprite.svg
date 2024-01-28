@@ -1,5 +1,8 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
+<symbol id="icon-tel" viewBox="0 0 32 32">
+<path fill="" style="fill:" d="M23 0h-14c-1.654 0-3 1.346-3 3v26c0 1.654 1.346 3 3 3h14c1.654 0 3-1.346 3-3v-26c0-1.654-1.346-3-3-3zM9 2h14c0.552 0 1 0.448 1 1v21h-16v-21c0-0.552 0.448-1 1-1zM23 30h-14c-0.552 0-1-0.448-1-1v-3h16v3c0 0.552-0.448 1-1 1z"></path>
+</symbol>
 <symbol id="icon-facebook" viewBox="0 0 32 32">
 <path fill="#3d5a98" style="fill: var(--color1, #3d5a98)" d="M29.163 1.208h-26.323c-0.902 0-1.633 0.731-1.633 1.633v26.323c0 0.902 0.731 1.633 1.633 1.633h26.323c0.902 0 1.632-0.731 1.632-1.633v-26.323c0-0.902-0.731-1.633-1.632-1.633z"></path>
 <path fill="#fff" style="fill: var(--color2, #fff)" d="M21.62 30.793v-11.457h3.845l0.575-4.465h-4.42v-2.85c0-1.293 0.36-2.175 2.213-2.175h2.365v-4c-1.145-0.119-2.296-0.176-3.447-0.17-3.405 0-5.75 2.075-5.75 5.902v3.293h-3.845v4.465h3.845v11.457h4.62z"></path>
