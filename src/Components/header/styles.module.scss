@@ -2,7 +2,6 @@
 
 .header {
   min-height: 72px;
-  border: 1px solid red;
 
   .container {
     display: flex;
@@ -31,7 +30,7 @@
       display: none;
     }
     .nav_wripper_mobile {
-      position: absolute;
+      position: fixed;
       top: 0%;
       left: 0%;
 
@@ -40,7 +39,7 @@
       padding: 50px 20px;
 
       display: flex;
-      justify-content: space-evenly;
+      justify-content: flex-start;
       align-items: center;
       flex-direction: column;
 
@@ -61,6 +60,8 @@
         align-items: center;
         flex-direction: column;
         gap: 20px;
+
+        margin-top: 100px;
 
         .nav_link {
           text-align: left;
