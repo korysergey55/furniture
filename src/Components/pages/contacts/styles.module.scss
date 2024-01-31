@@ -1,0 +1,101 @@
+@import '../../../sourses/styles/variebles.scss';
+.contacts_page {
+  .container {
+    padding: 40px 15px;
+    .title {
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 1.3;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+    .discription {
+      display: block;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0.03em;
+      text-align: left;
+    }
+    .form_wripper {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: rgb(221, 221, 222);
+
+      .form_title {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: 0.03em;
+        text-align: center;
+        color: #434455;
+      }
+
+      .contacts_list {
+        display: flex;
+        justify-content: flex-start;
+        // align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        .text {
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 1.3;
+          letter-spacing: 0.03em;
+          text-align: left;
+          color: #434455;
+        }
+        .link {
+          display: flex;
+          // justify-content: center;
+          align-items: center;
+          gap: 10px;
+          margin-top: 10px;
+
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+          letter-spacing: 0.32px;
+          color: #434455;
+          transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+          &:hover {
+            color: $activeColor;
+          }
+
+          &:hover .icon {
+            fill: $activeColor;
+          }
+
+          .icon {
+            width: 20px;
+            height: 20px;
+            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+            &:hover {
+              fill: $activeColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts_page {
+    .container {
+      .title {
+        text-align: left;
+      }
+      .discription {
+        display: block;
+        max-width: 500px;
+        text-align: left;
+      }
+    }
+  }
+}

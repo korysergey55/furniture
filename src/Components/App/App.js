@@ -7,8 +7,7 @@ import AboutUs from '../pages/about us/AboutUs';
 import ContactsPage from '../pages/contacts/ContactsPage';
 import HomePage from '../pages/home/HomePage'
 import NotFoundPage from '../pages/notFound/NotFoundPage';
-
-
+import Footer from '../footer/Footer';
 
 const App = () => {
   return (
@@ -23,6 +22,7 @@ const App = () => {
 
         </Routes>
       </Suspense>
+      <Footer></Footer>
     </BrowserRouter>
   );
 }
