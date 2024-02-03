@@ -19,13 +19,13 @@ const ContactsPage = () => {
             <li className={styles.item}>
               <p className={styles.text}>Phone</p>
               <a className={styles.link}
-                href={`tel:+44 734166645`}
+                href={`tel:+44 7341666453`}
                 target="_blank"
                 rel="noopener noreferrer"
               > <svg className={styles.icon} aria-label="telephone icon">
                   <use href={sprite + '#icon-tel'}></use>
                 </svg>
-                +44 734166645
+                +44 7341666453
               </a>
             </li>
             <li className={styles.item}>
@@ -40,6 +40,42 @@ const ContactsPage = () => {
                 </svg>
                 furniture@gmail.com
               </a>
+            </li>
+            <li className={styles.item}>
+              <p className={styles.text}>Social media</p>
+              <ul className={styles.social_list}>
+                <li className={styles.item}>
+                  <a className={styles.link}
+                    href='https://www.instagram.com/'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg className={styles.icon} width="32" height="32" aria-label="instagram icon">
+                      <use href={sprite + '#icon-instagram'}></use>
+                    </svg>
+                  </a>
+                </li>
+                <li className={styles.item}>
+                  <a className={styles.link}
+                    href='https://www.facebook.com/'
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <svg className={styles.icon} width="32" height="32" aria-label="facebook icon">
+                      <use href={sprite + '#icon-facebook'}></use>
+                    </svg>
+                  </a>
+                </li>
+                <li className={styles.item}>
+                  <a className={styles.link}
+                    href='https://www.tiktok.com/'
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <svg className={styles.icon} width="32" height="32" aria-label="tiktok icon">
+                      <use href={sprite + '#icon-tiktok'}></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
           <ContactForm />

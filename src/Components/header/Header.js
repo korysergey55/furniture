@@ -39,20 +39,20 @@ const Header = () => {
           </li>
           <li className={styles.item}>
             <NavLink
-              to='/about'
-              exact={true}
-              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
-            >
-              About us
-            </NavLink>
-          </li>
-          <li className={styles.item}>
-            <NavLink
               to='/products'
               exact={true}
               className={(navData) => navData.isActive ? styles.active : styles.nav_link}
             >
               Products
+            </NavLink>
+          </li>
+          <li className={styles.item}>
+            <NavLink
+              to='/about'
+              exact={true}
+              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+            >
+              About us
             </NavLink>
           </li>
           <li className={styles.item}>
@@ -88,22 +88,22 @@ const Header = () => {
             </li>
             <li className={styles.item}>
               <NavLink
-                to='about'
-                exact={true}
-                className={(navData) => navData.isActive ? styles.active : styles.nav_link}
-                onClick={handleMenu}
-              >
-                About us
-              </NavLink>
-            </li>
-            <li className={styles.item}>
-              <NavLink
                 to='/products'
                 exact={true}
                 className={(navData) => navData.isActive ? styles.active : styles.nav_link}
                 onClick={handleMenu}
               >
                 Products
+              </NavLink>
+            </li>
+            <li className={styles.item}>
+              <NavLink
+                to='/about'
+                exact={true}
+                className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+                onClick={handleMenu}
+              >
+                About us
               </NavLink>
             </li>
             <li className={styles.item}>
@@ -117,40 +117,40 @@ const Header = () => {
               </NavLink>
             </li>
           </ul>
+          <ul className={styles.social_list}>
+            <li className={styles.item}>
+              <a className={styles.link}
+                href='https://www.instagram.com/'
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg className={styles.icon} width="32" height="32" aria-label="instagram icon">
+                  <use href={sprite + '#icon-instagram'}></use>
+                </svg>
+              </a>
+            </li>
+            <li className={styles.item}>
+              <a className={styles.link}
+                href='https://www.facebook.com/'
+                target="_blank"
+                rel="noopener noreferrer">
+                <svg className={styles.icon} width="32" height="32" aria-label="facebook icon">
+                  <use href={sprite + '#icon-facebook'}></use>
+                </svg>
+              </a>
+            </li>
+            <li className={styles.item}>
+              <a className={styles.link}
+                href='https://www.tiktok.com/'
+                target="_blank"
+                rel="noopener noreferrer">
+                <svg className={styles.icon} width="42" height="42" aria-label="tiktok icon">
+                  <use href={sprite + '#icon-tiktok'}></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul className={styles.social_list}>
-          <li className={styles.item}>
-            <a className={styles.link}
-              href='https://www.instagram.com/'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg className={styles.icon} width="32" height="32" aria-label="instagram icon">
-                <use href={sprite + '#icon-instagram'}></use>
-              </svg>
-            </a>
-          </li>
-          <li className={styles.item}>
-            <a className={styles.link}
-              href='https://www.facebook.com/'
-              target="_blank"
-              rel="noopener noreferrer">
-              <svg className={styles.icon} width="32" height="32" aria-label="facebook icon">
-                <use href={sprite + '#icon-facebook'}></use>
-              </svg>
-            </a>
-          </li>
-          <li className={styles.item}>
-            <a className={styles.link}
-              href='https://www.tiktok.com/'
-              target="_blank"
-              rel="noopener noreferrer">
-              <svg className={styles.icon} width="42" height="42" aria-label="tiktok icon">
-                <use href={sprite + '#icon-tiktok'}></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
         <button
           className={classnames({
             [styles.button_menu_hamburger]: true,
@@ -166,13 +166,13 @@ const Header = () => {
         </button>
         <div className={styles.contacts}>
           <a className={styles.link}
-            href={`tel:+44 734166645`}
+            href={`tel:+44 7341666453`}
             target="_blank"
             rel="noopener noreferrer"
           > <svg className={styles.icon} aria-label="telephone icon">
               <use href={sprite + '#icon-tel'}></use>
             </svg>
-            +44 734166645
+            +44 7341666453
           </a>
         </div>
       </div>

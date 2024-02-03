@@ -18,15 +18,15 @@ const Footer = () => {
         </div>
         <div className={styles.form_wripper}>
           <form className={styles.footer_form} id='footer-form'>
-            <label className={styles.label} for='footer-form'>Call back</label>
+            <label className={styles.label} for='phone-input'>Call back</label>
             <input className={styles.input}
-              name='footer-form'
-              id='footer-form-input'
+              name='phone-input'
+              id='phone-input'
               placeholder='Phone number'
               required
             />
             <button className={styles.button}
-              type='submit'
+              type='button'
               name='form-button'
               htmlFor='footer-form'
             >SEND</button>
@@ -56,19 +56,8 @@ const Footer = () => {
                 </svg>
               </a>
             </li>
-            <li className={styles.item}>
-              <a className={styles.link}
-                href='https://www.tiktok.com/'
-                target="_blank"
-                rel="noopener noreferrer">
-                <svg className={styles.icon} width="42" height="42" aria-label="tiktok icon">
-                  <use href={sprite + '#icon-tiktok-thin'}></use>
-                </svg>
-              </a>
-            </li>
           </ul>
         </div>
-
       </div>
     </div>
   );
