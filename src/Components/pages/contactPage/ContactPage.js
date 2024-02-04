@@ -42,7 +42,7 @@ const ContactsPage = () => {
               </a>
             </li>
             <li className={styles.item}>
-              <p className={styles.text}>Social media</p>
+              <p className={styles.text}>Follow us</p>
               <ul className={styles.social_list}>
                 <li className={styles.item}>
                   <a className={styles.link}
@@ -62,16 +62,6 @@ const ContactsPage = () => {
                     rel="noopener noreferrer">
                     <svg className={styles.icon} width="32" height="32" aria-label="facebook icon">
                       <use href={sprite + '#icon-facebook'}></use>
-                    </svg>
-                  </a>
-                </li>
-                <li className={styles.item}>
-                  <a className={styles.link}
-                    href='https://www.tiktok.com/'
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <svg className={styles.icon} width="32" height="32" aria-label="tiktok icon">
-                      <use href={sprite + '#icon-tiktok'}></use>
                     </svg>
                   </a>
                 </li>

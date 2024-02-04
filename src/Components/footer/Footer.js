@@ -33,7 +33,7 @@ const Footer = () => {
           </form>
         </div>
         <div className={styles.social_wripper}>
-          <h3 className={styles.social_title}>Social media</h3>
+          <h3 className={styles.social_title}>Follow us</h3>
           <ul className={styles.social_list}>
             <li className={styles.item}>
               <a className={styles.link}

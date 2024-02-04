@@ -37,8 +37,13 @@
         text-align: center;
       }
       .button {
+        width: 100%;
+        max-width: 190px;
         margin: 0 auto;
         margin-top: 20px;
+        padding: 0 40px;
+
+        font-weight: 600;
       }
     }
   }
@@ -54,6 +59,11 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+      }
+      .wripper {
+        .button {
+          margin-top: 40px;
+        }
       }
     }
   }

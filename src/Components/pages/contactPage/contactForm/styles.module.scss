@@ -1,9 +1,21 @@
+@import '../../../../sourses/styles/variebles.scss';
+
 .form {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+
+  width: 100%;
+  margin: 0 auto;
   margin-top: 40px;
+
+  .label_wripper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
 
   .label {
     font-size: 16px;
@@ -27,6 +39,11 @@
     border-radius: 4px;
     border: 1px solid #8e8f99;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    outline: transparent;
+
+    &:focus {
+      border: 2px solid $activeColor;
+    }
   }
   .textarea {
     width: 100%;
@@ -42,8 +59,15 @@
     border-radius: 4px;
     border: 1px solid #8e8f99;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    outline: transparent;
 
     resize: none;
+
+    &:focus {
+      &:focus {
+        border: 2px solid $activeColor;
+      }
+    }
   }
 }
 
@@ -53,15 +77,33 @@
     // justify-content: flex-start;
     // flex-direction: row;
     // gap: 10px;
-    // margin-top: 40px;
+    max-width: 1000px;
+
+    .inpurs_container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      gap: 10px;
+    }
     .input {
+      width: 220px;
       max-width: 280px;
     }
     .textarea {
-      max-width: 280px;
+      width: 100%;
     }
     .button {
       width: 100%;
+      max-width: 280px;
+      align-self: flex-end;
+    }
+  }
+}
+
+@media screen and(min-width:1440px) {
+  .form {
+    .input {
+      width: 280px;
       max-width: 280px;
     }
   }

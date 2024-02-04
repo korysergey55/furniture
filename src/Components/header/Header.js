@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { useLocation, NavLink } from 'react-router-dom'
+import { pathes } from '../../utiles/pathes/pathes'
 
 import styles from './styles.module.scss'
 import sprite from '../../sourses/icons/sprite.svg'
@@ -30,7 +31,7 @@ const Header = () => {
         <ul className={styles.nav_list}>
           <li className={styles.item}>
             <NavLink
-              to='/'
+              to={pathes.home}
               exact={true}
               className={(navData) => navData.isActive ? styles.active : styles.nav_link}
             >
@@ -39,29 +40,48 @@ const Header = () => {
           </li>
           <li className={styles.item}>
             <NavLink
-              to='/products'
+              to={pathes.about}
               exact={true}
               className={(navData) => navData.isActive ? styles.active : styles.nav_link}
             >
-              Products
+              About
             </NavLink>
           </li>
           <li className={styles.item}>
             <NavLink
-              to='/about'
+              to={pathes.services}
               exact={true}
               className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+              onClick={handleMenu}
             >
-              About us
+              Services
             </NavLink>
           </li>
           <li className={styles.item}>
             <NavLink
-              to='/contacts'
+              to={pathes.process}
               exact={true}
               className={(navData) => navData.isActive ? styles.active : styles.nav_link}
             >
-              Contacts
+              Process
+            </NavLink>
+          </li>
+          <li className={styles.item}>
+            <NavLink
+              to={pathes.portfolio}
+              exact={true}
+              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+            >
+              Portfolio
+            </NavLink>
+          </li>
+          <li className={styles.item}>
+            <NavLink
+              to={pathes.contact}
+              exact={true}
+              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+            >
+              Contact
             </NavLink>
           </li>
         </ul>
@@ -78,7 +98,7 @@ const Header = () => {
           <ul className={styles.list}>
             <li className={styles.item}>
               <NavLink
-                to='/'
+                to={pathes.home}
                 exact={true}
                 className={(navData) => navData.isActive ? styles.active : styles.nav_link}
                 onClick={handleMenu}
@@ -88,32 +108,50 @@ const Header = () => {
             </li>
             <li className={styles.item}>
               <NavLink
-                to='/products'
+                to={pathes.about}
                 exact={true}
                 className={(navData) => navData.isActive ? styles.active : styles.nav_link}
                 onClick={handleMenu}
               >
-                Products
+                About
               </NavLink>
             </li>
             <li className={styles.item}>
               <NavLink
-                to='/about'
+                to={pathes.services}
                 exact={true}
                 className={(navData) => navData.isActive ? styles.active : styles.nav_link}
                 onClick={handleMenu}
               >
-                About us
+                Services
               </NavLink>
             </li>
             <li className={styles.item}>
               <NavLink
-                to='/contacts'
+                to={pathes.process}
+                exact={true}
+                className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+              >
+                Process
+              </NavLink>
+            </li>
+            <li className={styles.item}>
+              <NavLink
+                to={pathes.portfolio}
+                exact={true}
+                className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+              >
+                Portfolio
+              </NavLink>
+            </li>
+            <li className={styles.item}>
+              <NavLink
+                to={pathes.contact}
                 exact={true}
                 className={(navData) => navData.isActive ? styles.active : styles.nav_link}
                 onClick={handleMenu}
               >
-                Contacts
+                Contact
               </NavLink>
             </li>
           </ul>
@@ -136,16 +174,6 @@ const Header = () => {
                 rel="noopener noreferrer">
                 <svg className={styles.icon} width="32" height="32" aria-label="facebook icon">
                   <use href={sprite + '#icon-facebook'}></use>
-                </svg>
-              </a>
-            </li>
-            <li className={styles.item}>
-              <a className={styles.link}
-                href='https://www.tiktok.com/'
-                target="_blank"
-                rel="noopener noreferrer">
-                <svg className={styles.icon} width="42" height="42" aria-label="tiktok icon">
-                  <use href={sprite + '#icon-tiktok'}></use>
                 </svg>
               </a>
             </li>

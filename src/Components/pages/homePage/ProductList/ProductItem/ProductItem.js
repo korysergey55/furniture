@@ -1,5 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router';
+import { pathes } from '../../../../../utiles/pathes/pathes';
+
 import styles from './styles.module.scss'
 import defaultImage from '../../../../../sourses/images/hero/product-image.jpg'
 
@@ -13,7 +15,7 @@ const ProductItem = ({ item }) => {
       <button
         type='button'
         className={styles.button}
-        onClick={() => navigate(`/products/${item.path}`)}
+        onClick={() => navigate(`${pathes.portfolio}/${item.path}`)}
       >View
       </button>
     </li>

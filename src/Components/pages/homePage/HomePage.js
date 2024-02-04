@@ -18,7 +18,7 @@ const HomePage = () => {
             type='button'
             className={styles.button}
             onClick={() => navigate('contacts')}
-          >GET IN TOUCH
+          >Contact
           </button>
         </div>
         <ProductList />
