@@ -1,8 +1,9 @@
 import React from 'react'
+import { useState } from 'react'
+
 import styles from './styles.module.scss'
 import sprite from '../../sourses/icons/sprite.svg'
-
-import { useState } from 'react'
+import { contactInfo } from '../../utiles/contactInfo/contactInfo'
 
 const Footer = () => {
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
         </div>
         <div className={styles.form_wripper}>
           <form className={styles.footer_form} id='footer-form'>
-            <label className={styles.label} for='phone-input'>Call back</label>
+            <label className={styles.label} htmlFor='phone-input'>Call back</label>
             <input className={styles.input}
               name='phone-input'
               id='phone-input'
@@ -37,7 +38,7 @@ const Footer = () => {
           <ul className={styles.social_list}>
             <li className={styles.item}>
               <a className={styles.link}
-                href='https://www.instagram.com/'
+                href={contactInfo.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -48,7 +49,7 @@ const Footer = () => {
             </li>
             <li className={styles.item}>
               <a className={styles.link}
-                href='https://www.facebook.com/'
+                href={contactInfo.facebook}
                 target="_blank"
                 rel="noopener noreferrer">
                 <svg className={styles.icon} width="32" height="32" aria-label="facebook icon">

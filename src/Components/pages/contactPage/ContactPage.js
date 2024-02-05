@@ -1,7 +1,11 @@
 import React from 'react'
 import ContactForm from './contactForm/ContactForm';
+
 import styles from './styles.module.scss'
 import sprite from '../../../sourses/icons/sprite.svg'
+import { contactInfo } from '../../../utiles/contactInfo/contactInfo';
+
+
 
 const ContactsPage = () => {
   return (
@@ -19,26 +23,26 @@ const ContactsPage = () => {
             <li className={styles.item}>
               <p className={styles.text}>Phone</p>
               <a className={styles.link}
-                href={`tel:+44 7341666453`}
+                href={`tel:+44${contactInfo.phoneNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
               > <svg className={styles.icon} aria-label="telephone icon">
                   <use href={sprite + '#icon-tel'}></use>
                 </svg>
-                +44 7341666453
+                +44 {contactInfo.phoneNumber}
               </a>
             </li>
             <li className={styles.item}>
               <p className={styles.text}>Email</p>
               <a className={styles.link}
-                href={`mailto:furniture@gmail.com`}
+                href={`mailto:${contactInfo.email}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <svg className={styles.icon} aria-label="telephone icon">
                   <use href={sprite + '#icon-email'}></use>
                 </svg>
-                furniture@gmail.com
+                {contactInfo.email}
               </a>
             </li>
             <li className={styles.item}>
@@ -46,7 +50,7 @@ const ContactsPage = () => {
               <ul className={styles.social_list}>
                 <li className={styles.item}>
                   <a className={styles.link}
-                    href='https://www.instagram.com/'
+                    href={contactInfo.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -57,7 +61,7 @@ const ContactsPage = () => {
                 </li>
                 <li className={styles.item}>
                   <a className={styles.link}
-                    href='https://www.facebook.com/'
+                    href={contactInfo.facebook}
                     target="_blank"
                     rel="noopener noreferrer">
                     <svg className={styles.icon} width="32" height="32" aria-label="facebook icon">
