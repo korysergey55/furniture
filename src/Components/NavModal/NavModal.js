@@ -81,6 +81,17 @@ const NavModal = observer(() => {
           </NavLink>
         </li>
       </ul>
+      <div className={styles.contacts}>
+        <a className={styles.link}
+          href={`tel:+44${contactInfo.phoneNumber}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        > <svg className={styles.icon} aria-label="telephone icon">
+            <use href={sprite + '#icon-tel'}></use>
+          </svg>
+          +44 {contactInfo.phoneNumber}
+        </a>
+      </div>
       <ul className={styles.social_list}>
         <li className={styles.item}>
           <a className={styles.link}

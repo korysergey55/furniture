@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import { configure, observable } from 'mobx';
+import { configure } from 'mobx';
 import NavModalStore from './NavModalStore';
 
 configure({ enforceActions: 'observed' });

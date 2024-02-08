@@ -97,9 +97,9 @@ const Header = observer(() => {
             <use href={sprite + '#icon-menu-hamburger'}></use>
           </svg>
         </button>
-        <div className={styles.contacts}>
+        {/* <div className={styles.contacts}>
           <a className={styles.link}
-            href={`tel:+44${contactInfo}`}
+            href={`tel:+44${contactInfo.phoneNumber}`}
             target="_blank"
             rel="noopener noreferrer"
           > <svg className={styles.icon} aria-label="telephone icon">
@@ -107,7 +107,7 @@ const Header = observer(() => {
             </svg>
             +44 {contactInfo.phoneNumber}
           </a>
-        </div>
+        </div> */}
       </div>
     </div >
   );

@@ -12,12 +12,12 @@ const ProductItem = ({ item }) => {
       <img className={styles.image} src={item.src || defaultImage} alt={item.productName || 'image'}></img>
       <h3 className={styles.title}>{item.productName}</h3>
       <p className={styles.discription}>{item.discription}</p>
-      <button
+      {/* <button
         type='button'
         className={styles.button}
         onClick={() => navigate(`${pathes.portfolio}/${item.path}`)}
       >View
-      </button>
+      </button> */}
     </li>
   );
 }
