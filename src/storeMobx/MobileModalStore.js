@@ -1,16 +1,12 @@
 import {
-  makeAutoObservable,
   makeObservable,
   observable,
   action,
   reaction,
   toJS,
-  configure,
-  computed,
-  runInAction,
 } from 'mobx';
 
-class NavModalStore {
+class MobileModalStore {
   modal = false;
 
   constructor() {
@@ -19,13 +15,13 @@ class NavModalStore {
       setModal: action
     });
 
-    // reaction(
-    //   () => this.modal,
-    //   _ => console.log('mobx', toJS(this.modal))
-    // );
+    reaction(
+      () => this.modal,
+      _ => console.log('mobx', toJS(this.modal))
+    );
   }
   setModal() {
     this.modal = !this.modal;
   }
 }
-export default new NavModalStore();
+export default new MobileModalStore();

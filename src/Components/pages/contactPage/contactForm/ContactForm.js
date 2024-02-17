@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useStore } from '../../../../storeMobx'
+import scrollController from '../../../../utiles/scrollController/scrollController'
+
 import styles from './styles.module.scss'
+import Loader from '../../../loader/Loader'
 
 const INITIAL_STATE = {
   firstName: '',
@@ -10,8 +13,18 @@ const INITIAL_STATE = {
 }
 
 const ContactForm = () => {
-  const [state, setState] = useState({ ...INITIAL_STATE })
   const { ContactFormStore } = useStore()
+  const [state, setState] = useState({ ...INITIAL_STATE })
+  const [loader, setLoader] = useState(false)
+
+  useEffect(() => {
+    if (loader) {
+      scrollController.disabledScroll()
+    }
+    else {
+      scrollController.enabledScroll()
+    }
+  }, [loader])
 
   const handleChange = (evt) => {
     evt.preventDefault()
@@ -20,13 +33,29 @@ const ContactForm = () => {
     }))
   }
 
+  const submitNewMassage = async () => {
+    try {
+      setLoader(true)
+      await ContactFormStore.setUserData(state)
+      // setState({ ...INITIAL_STATE })
+      setLoader(false)
+    }
+    catch (error) {
+      console.log(error)
+    }
+    finally {
+      setLoader(false)
+    }
+  }
+
   const handleSubmit = (evt) => {
     evt.preventDefault()
-    ContactFormStore.setUserData(state)
-    setState({ ...INITIAL_STATE })
+    submitNewMassage()
   }
+
   return (
     <form className={styles.form} name='form' id='contactForm' onSubmit={handleSubmit}>
+      {loader && <Loader />}
       <div className={styles.inpurs_container}>
         <div className={styles.label_wripper}>
           <label className={styles.label} htmlFor='firstName'>First Name</label>

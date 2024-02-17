@@ -15,6 +15,7 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 10px;
+    margin-top: 10px;
   }
 
   .label {
@@ -42,7 +43,7 @@
     outline: transparent;
 
     &:focus {
-      border: 2px solid $activeColor;
+      border: 2px solid #2196f3;
     }
   }
   .textarea {
@@ -64,9 +65,7 @@
     resize: none;
 
     &:focus {
-      &:focus {
-        border: 2px solid $activeColor;
-      }
+      border: 2px solid #2196f3;
     }
   }
 }
@@ -78,6 +77,10 @@
     // flex-direction: row;
     // gap: 10px;
     max-width: 1000px;
+
+    .label_wripper {
+      margin-top: 0;
+    }
 
     .inpurs_container {
       display: flex;

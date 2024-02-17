@@ -1,12 +1,12 @@
 import { createContext, useContext } from 'react';
 import { configure } from 'mobx';
-import NavModalStore from './NavModalStore';
+import MobileModalStore from './MobileModalStore';
 import ContactFormStore from './FormStore'
 
 configure({ enforceActions: 'observed' });
 
 class RootStore {
-  NavModalStore = NavModalStore;
+  MobileModalStore = MobileModalStore;
   ContactFormStore = ContactFormStore
 }
 

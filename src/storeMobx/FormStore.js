@@ -21,7 +21,8 @@ class ContactFormStore {
     );
   }
   setUserData(data) {
-    this.userData = { ...data };
+    this.userData = data;
+    return fetch('/')
   }
 }
 export default new ContactFormStore();

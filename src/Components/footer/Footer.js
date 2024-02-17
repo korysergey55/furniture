@@ -17,13 +17,37 @@ const Footer = () => {
             Specialising in bespoke fitted wardrobes and furniture
           </p>
         </div>
+        <ul className={styles.contacts}>
+          <li className={styles.item}>
+            <a className={styles.link}
+              href={`tel:+44${contactInfo.address}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            > <svg className={styles.icon} aria-label="location icon">
+                <use href={sprite + '#icon-location'}></use>
+              </svg>
+              {contactInfo.address}
+            </a>
+          </li>
+          <li className={styles.item}>
+            <a className={styles.link}
+              href={`tel:+44${contactInfo.phoneNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            > <svg className={styles.icon} aria-label="telephone icon">
+                <use href={sprite + '#icon-tel'}></use>
+              </svg>
+              +44 {contactInfo.phoneNumber}
+            </a>
+          </li>
+        </ul>
         <div className={styles.form_wripper}>
           <form className={styles.footer_form} id='footer-form'>
-            <label className={styles.label} htmlFor='phone-input'>Call back</label>
+            <label className={styles.label} htmlFor='phone'>Call back</label>
             <input className={styles.input}
-              name='phone-input'
-              id='phone-input'
-              placeholder='Phone number'
+              name='phone'
+              id='phone'
+              placeholder='Enter phone number please'
               required
             />
             <button className={styles.button}

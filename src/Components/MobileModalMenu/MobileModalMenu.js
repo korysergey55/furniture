@@ -6,16 +6,15 @@ import { NavLink } from 'react-router-dom'
 import { pathes } from '../../utiles/pathes/pathes'
 import { contactInfo } from '../../utiles/contactInfo/contactInfo'
 
-
 import styles from './styles.module.scss'
 import sprite from '../../sourses/icons/sprite.svg'
 
 
-const NavModal = observer(() => {
-  const { NavModalStore } = useStore()
+const MobileModalMenu = observer(() => {
+  const { MobileModalStore } = useStore()
 
   const hadleModal = () => {
-    NavModalStore.setModal()
+    MobileModalStore.setModal()
   }
   return (
     <div className={styles.nav_wripper_mobile}>
@@ -119,4 +118,4 @@ const NavModal = observer(() => {
   );
 })
 
-export default NavModal;
+export default MobileModalMenu;

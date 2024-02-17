@@ -1,29 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { observer } from 'mobx-react'
 import { useStore } from '../../storeMobx'
 
-import { useState, useEffect } from 'react'
-import { useLocation, NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { pathes } from '../../utiles/pathes/pathes'
-import { contactInfo } from '../../utiles/contactInfo/contactInfo'
-
 
 import styles from './styles.module.scss'
 import sprite from '../../sourses/icons/sprite.svg'
 import classnames from 'classnames'
+import scrollController from '../../utiles/scrollController/scrollController'
 
 const Header = observer(() => {
-  const { NavModalStore } = useStore()
+  const { MobileModalStore } = useStore()
+  const { modal } = MobileModalStore
   const location = useLocation()
-  const [state, setState] = useState(false)
 
   useEffect(() => {
-    if (!state) handleMenu()
+    if (modal) { scrollController.disabledScroll() }
+    else { scrollController.enabledScroll() }
+  }, [modal])
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scroll({ top: 0 })
+    }, 10)
   }, [location.pathname])
 
-
-  const handleMenu = () => {
-    setState(!state)
+  const handleMobileMenu = () => {
+    MobileModalStore.setModal()
   }
 
   return (
@@ -87,9 +91,9 @@ const Header = observer(() => {
         <button
           className={classnames({
             [styles.button_menu_hamburger]: true,
-            [styles.button_menu_hamburger_dasable]: !state,
+            [styles.button_menu_hamburger_dasable]: modal,
           })}
-          onClick={() => NavModalStore.setModal()}>
+          onClick={handleMobileMenu}>
           <svg className={styles.icon_menu_hamburger}
             width="30"
             height="30"
@@ -97,17 +101,6 @@ const Header = observer(() => {
             <use href={sprite + '#icon-menu-hamburger'}></use>
           </svg>
         </button>
-        {/* <div className={styles.contacts}>
-          <a className={styles.link}
-            href={`tel:+44${contactInfo.phoneNumber}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          > <svg className={styles.icon} aria-label="telephone icon">
-              <use href={sprite + '#icon-tel'}></use>
-            </svg>
-            +44 {contactInfo.phoneNumber}
-          </a>
-        </div> */}
       </div>
     </div >
   );

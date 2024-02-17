@@ -22,8 +22,7 @@
     gap: 25px;
 
     width: 100%;
-    max-width: 480px;
-    padding: 10px;
+    padding: 10px 15px;
     margin: 0 auto;
 
     .logo {
@@ -52,9 +51,6 @@
     .button_menu_hamburger_dasable {
       visibility: hidden;
       opacity: 0;
-    }
-    .contacts {
-      display: none;
     }
   }
 }

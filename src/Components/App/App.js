@@ -8,6 +8,8 @@ import history from '../../utiles/history/history'
 import { pathes } from '../../utiles/pathes/pathes'
 
 import Header from '../header/Header';
+import Headroom from 'react-headroom';
+
 import HomePage from '../pages/homePage/HomePage'
 import AboutUs from '../pages/aboutUsPage/AboutUsPage';
 import ServicesPage from '../pages/ServicesPage/ServicesPage';
@@ -17,19 +19,19 @@ import ContactPage from '../pages/contactPage/ContactPage';
 import ProductDetails from '../pages/ProductDetails/ProductDetails';
 import NotFoundPage from '../pages/notFoundPage/NotFoundPage';
 import Footer from '../footer/Footer';
-import NavModal from '../NavModal/NavModal';
+import MobileModalMenu from '../MobileModalMenu/MobileModalMenu';
+import Loader from '../loader/Loader';
 
-import Headroom from 'react-headroom';
 
 const App = observer(() => {
-  const { NavModalStore } = useStore()
-  const { modal } = NavModalStore
+  const { MobileModalStore } = useStore()
+  const { modal } = MobileModalStore
   return (
     <BrowserRouter history={history}>
       <Headroom>
         <Header />
       </Headroom>
-      <Suspense fallback='Loading...'>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route exact={true} path={pathes.home} element={<HomePage />} ></Route>
           <Route exact={true} path={pathes.about} element={<AboutUs />} ></Route>
@@ -39,11 +41,11 @@ const App = observer(() => {
           <Route exact={true} path={pathes.contact} element={<ContactPage />} ></Route>
           <Route exact={false} path='/portfolio/:productDetails' element={<ProductDetails />} ></Route>
           <Route exact={false} path='/:notFound' element={<NotFoundPage />} ></Route>
-
         </Routes>
       </Suspense>
+      {/* <Loader /> */}
       <Footer></Footer>
-      {modal ? <NavModal /> : null}
+      {modal ? <MobileModalMenu /> : null}
     </BrowserRouter>
   );
 })
