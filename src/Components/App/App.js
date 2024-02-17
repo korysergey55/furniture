@@ -9,19 +9,18 @@ import { pathes } from '../../utiles/pathes/pathes'
 
 import Header from '../header/Header';
 import Headroom from 'react-headroom';
-
-import HomePage from '../pages/homePage/HomePage'
-import AboutUs from '../pages/aboutUsPage/AboutUsPage';
-import ServicesPage from '../pages/ServicesPage/ServicesPage';
-import ProcessPage from '../pages/processPage/ProcessPage';
-import PortfolioPage from '../pages/portfolioPage/PortfolioPage';
-import ContactPage from '../pages/contactPage/ContactPage';
-import ProductDetails from '../pages/ProductDetails/ProductDetails';
-import NotFoundPage from '../pages/notFoundPage/NotFoundPage';
 import Footer from '../footer/Footer';
 import MobileModalMenu from '../MobileModalMenu/MobileModalMenu';
 import Loader from '../loader/Loader';
 
+const HomePage = lazy(() => import('../pages/homePage/HomePage'))
+const AboutUs = lazy(() => import('../pages/aboutUsPage/AboutUsPage'))
+const ServicesPage = lazy(() => import('../pages/ServicesPage/ServicesPage'))
+const ProcessPage = lazy(() => import('../pages/processPage/ProcessPage'))
+const PortfolioPage = lazy(() => import('../pages/portfolioPage/PortfolioPage'))
+const ContactPage = lazy(() => import('../pages/contactPage/ContactPage'))
+const ProductDetails = lazy(() => import('../pages/ProductDetails/ProductDetails'))
+const NotFoundPage = lazy(() => import('../pages/notFoundPage/NotFoundPage'))
 
 const App = observer(() => {
   const { MobileModalStore } = useStore()
@@ -43,8 +42,8 @@ const App = observer(() => {
           <Route exact={false} path='/:notFound' element={<NotFoundPage />} ></Route>
         </Routes>
       </Suspense>
-      {/* <Loader /> */}
       <Footer></Footer>
+      {/* <Loader /> */}
       {modal ? <MobileModalMenu /> : null}
     </BrowserRouter>
   );

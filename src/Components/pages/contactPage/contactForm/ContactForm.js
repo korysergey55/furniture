@@ -37,7 +37,7 @@ const ContactForm = () => {
     try {
       setLoader(true)
       await ContactFormStore.setUserData(state)
-      // setState({ ...INITIAL_STATE })
+      setState({ ...INITIAL_STATE })
       setLoader(false)
     }
     catch (error) {
