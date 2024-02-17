@@ -8,7 +8,7 @@ import { contactInfo } from '../../utiles/contactInfo/contactInfo'
 
 import styles from './styles.module.scss'
 import sprite from '../../sourses/icons/sprite.svg'
-
+import InstaIcon from '../icons/InstaIcon'
 
 const MobileModalMenu = observer(() => {
   const { MobileModalStore } = useStore()
@@ -98,11 +98,10 @@ const MobileModalMenu = observer(() => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg className={styles.icon} width="32" height="32" aria-label="instagram icon">
-              <use href={sprite + '#icon-instagram'}></use>
-            </svg>
+            <InstaIcon wedth='30' height='30' />
           </a>
         </li>
+
         <li className={styles.item}>
           <a className={styles.link}
             href={contactInfo.facebook}

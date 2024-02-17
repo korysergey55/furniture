@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './styles.module.scss'
 import { RotatingLines } from 'react-loader-spinner'
 
-
 const Loader = () => {
   return (
     <div className={styles.wripper}>

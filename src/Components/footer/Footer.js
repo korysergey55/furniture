@@ -1,9 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
+import { contactInfo } from '../../utiles/contactInfo/contactInfo'
+import InstaIcon from '../icons/InstaIcon'
 
 import styles from './styles.module.scss'
 import sprite from '../../sourses/icons/sprite.svg'
-import { contactInfo } from '../../utiles/contactInfo/contactInfo'
+
 
 const Footer = () => {
   return (
@@ -66,9 +67,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg className={styles.icon} width="32" height="32" aria-label="instagram icon">
-                  <use href={sprite + '#icon-instagram'}></use>
-                </svg>
+                <InstaIcon wedth='30' height='30' />
               </a>
             </li>
             <li className={styles.item}>

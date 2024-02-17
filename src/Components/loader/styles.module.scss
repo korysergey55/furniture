@@ -4,11 +4,10 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  // z-index: 2000;
+  z-index: 2000;
 
   display: flex;
   justify-content: center;
   align-items: center;
-
-  overflow-y: hidden;
+  color: #ffffff;
 }

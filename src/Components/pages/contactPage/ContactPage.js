@@ -4,8 +4,7 @@ import ContactForm from './contactForm/ContactForm';
 import styles from './styles.module.scss'
 import sprite from '../../../sourses/icons/sprite.svg'
 import { contactInfo } from '../../../utiles/contactInfo/contactInfo';
-
-
+import InstaIcon from '../../icons/InstaIcon';
 
 const ContactsPage = () => {
   return (
@@ -54,9 +53,7 @@ const ContactsPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <svg className={styles.icon} width="32" height="32" aria-label="instagram icon">
-                      <use href={sprite + '#icon-instagram'}></use>
-                    </svg>
+                    <InstaIcon wedth='20' height='20' />
                   </a>
                 </li>
                 <li className={styles.item}>

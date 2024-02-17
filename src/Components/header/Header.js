@@ -16,8 +16,12 @@ const Header = observer(() => {
   const location = useLocation()
 
   useEffect(() => {
-    if (modal) { scrollController.disabledScroll() }
-    else { scrollController.enabledScroll() }
+    if (modal) {
+      scrollController.disabledScroll()
+    }
+    else {
+      scrollController.enabledScroll()
+    }
   }, [modal])
 
   useEffect(() => {
