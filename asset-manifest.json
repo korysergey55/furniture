@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/furniture/static/css/main.3cd92156.css",
-    "main.js": "/furniture/static/js/main.8b3807a6.js",
-    "static/css/676.72c84ac2.chunk.css": "/furniture/static/css/676.72c84ac2.chunk.css",
-    "static/js/676.596c3308.chunk.js": "/furniture/static/js/676.596c3308.chunk.js",
+    "main.css": "/furniture/static/css/main.55fa2e60.css",
+    "main.js": "/furniture/static/js/main.67d0081c.js",
+    "static/css/676.7000f56b.chunk.css": "/furniture/static/css/676.7000f56b.chunk.css",
+    "static/js/676.986a14c7.chunk.js": "/furniture/static/js/676.986a14c7.chunk.js",
     "static/css/200.31d6cfe0.chunk.css": "/furniture/static/css/200.31d6cfe0.chunk.css",
     "static/js/200.73e49d28.chunk.js": "/furniture/static/js/200.73e49d28.chunk.js",
     "static/css/974.31d6cfe0.chunk.css": "/furniture/static/css/974.31d6cfe0.chunk.css",
@@ -25,10 +25,10 @@
     "static/media/404.jpg": "/furniture/static/media/404.6ea98444d9b2b80d15fa.jpg",
     "static/media/sprite.svg": "/furniture/static/media/sprite.5587acfe78ff9bae3c3a75339642875a.svg",
     "index.html": "/furniture/index.html",
-    "main.3cd92156.css.map": "/furniture/static/css/main.3cd92156.css.map",
-    "main.8b3807a6.js.map": "/furniture/static/js/main.8b3807a6.js.map",
-    "676.72c84ac2.chunk.css.map": "/furniture/static/css/676.72c84ac2.chunk.css.map",
-    "676.596c3308.chunk.js.map": "/furniture/static/js/676.596c3308.chunk.js.map",
+    "main.55fa2e60.css.map": "/furniture/static/css/main.55fa2e60.css.map",
+    "main.67d0081c.js.map": "/furniture/static/js/main.67d0081c.js.map",
+    "676.7000f56b.chunk.css.map": "/furniture/static/css/676.7000f56b.chunk.css.map",
+    "676.986a14c7.chunk.js.map": "/furniture/static/js/676.986a14c7.chunk.js.map",
     "200.73e49d28.chunk.js.map": "/furniture/static/js/200.73e49d28.chunk.js.map",
     "974.4484c04b.chunk.js.map": "/furniture/static/js/974.4484c04b.chunk.js.map",
     "24.0de8609b.chunk.js.map": "/furniture/static/js/24.0de8609b.chunk.js.map",
@@ -40,7 +40,7 @@
     "884.d183ebd8.chunk.js.map": "/furniture/static/js/884.d183ebd8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3cd92156.css",
-    "static/js/main.8b3807a6.js"
+    "static/css/main.55fa2e60.css",
+    "static/js/main.67d0081c.js"
   ]
 }
