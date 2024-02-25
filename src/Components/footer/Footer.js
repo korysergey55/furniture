@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.container}>
-        <div className={styles.wripper}>
+        <div className={styles.logo_wripper}>
           <a className={styles.logo_footer} href="/"
           >THE BEST<span className={styles.logo_footer_acsent}> FURNITURE</span>
           </a>
@@ -21,7 +21,7 @@ const Footer = () => {
         <ul className={styles.contacts}>
           <li className={styles.item}>
             <a className={styles.link}
-              href={`tel:+44${contactInfo.address}`}
+              href={`https://maps.app.goo.gl/HxPhiiuEMtVVrEKU9`}
               target="_blank"
               rel="noopener noreferrer"
             > <svg className={styles.icon} aria-label="location icon">
@@ -35,7 +35,7 @@ const Footer = () => {
               href={`tel:+44${contactInfo.phoneNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-            > <svg className={styles.icon} aria-label="telephone icon">
+            > <svg className={styles.icon} aria-label="phone icon">
                 <use href={sprite + '#icon-tel'}></use>
               </svg>
               +44 {contactInfo.phoneNumber}
@@ -46,7 +46,7 @@ const Footer = () => {
               href={`mailto:${contactInfo.email}`}
               target="_blank"
               rel="noopener noreferrer"
-            > <svg className={styles.icon} aria-label="telephone icon">
+            > <svg className={styles.icon} aria-label="email icon">
                 <use href={sprite + '#icon-email'}></use>
               </svg>
               {contactInfo.email}
@@ -93,6 +93,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div className={styles.copy_right}>
+        <p className={styles.copy_right_text}>&#169; 2024 NARS furniture. All Rights Reserved </p>
       </div>
     </div >
   );
