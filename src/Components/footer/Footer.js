@@ -41,6 +41,17 @@ const Footer = () => {
               +44 {contactInfo.phoneNumber}
             </a>
           </li>
+          <li className={styles.item}>
+            <a className={styles.link}
+              href={`mailto:${contactInfo.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            > <svg className={styles.icon} aria-label="telephone icon">
+                <use href={sprite + '#icon-email'}></use>
+              </svg>
+              {contactInfo.email}
+            </a>
+          </li>
         </ul>
         <div className={styles.form_wripper}>
           <form className={styles.footer_form} id='footer-form'>
@@ -83,7 +94,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 

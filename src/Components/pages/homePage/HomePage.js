@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router';
 import styles from './styles.module.scss'
 import ProductList from './ProductList/ProductList';
+import { pathes } from '../../../utiles/pathes/pathes'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -10,14 +11,19 @@ const HomePage = () => {
       <div className={styles.container}>
         <div className={styles.hero}></div>
         <div className={styles.wripper}>
-          <h2 className={styles.title}>Truly Bespoke Fitted Furniture</h2>
+          <h2 className={styles.title}> Bespoke Fitted Furniture</h2>
           <p className={styles.discription}>
-            Cabinet maker based in Lymm, Cheshire. Specialising in bespoke fitted wardrobes and furniture
+            NARS furniture is a bespoke furniture company. We pride ourselves in top quality joinery and finishing
+            services.
+            <br />
+            With manufacturing facility in Cheadle we cover all surrounding areas producing tailor-made solutions for   both private and commercial sectors.
+            <br />
+            NARS furniture's goal is to create an environment where our clients feel happy, a place that reflects theirindividuality. This we perform with meticulous attention to detail.
           </p>
           <button
             type='button'
             className={styles.button}
-            onClick={() => navigate('contacts')}
+            onClick={() => navigate(`${pathes.contact}`)}
           >Contact
           </button>
         </div>

@@ -11,6 +11,7 @@
   min-height: 485px;
   padding: 20px;
 
+  border-radius: 3px;
   background-color: white;
 
   .image {
@@ -39,10 +40,15 @@
 @media screen and (min-width: 1440px) {
   .item {
     width: 405px;
+    min-height: 550px;
 
     .image {
       width: 400px;
       height: 300px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
