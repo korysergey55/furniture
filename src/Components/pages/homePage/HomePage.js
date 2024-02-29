@@ -1,10 +1,11 @@
 import React from 'react'
-import { useNavigate } from 'react-router';
 import styles from './styles.module.scss'
-import ProductList from './ProductList/ProductList';
+import { observer } from 'mobx-react';
+import { useNavigate } from 'react-router';
 import { pathes } from '../../../utiles/pathes/pathes'
+import ProductList from './ProductList/ProductList';
 
-const HomePage = () => {
+const HomePage = observer(() => {
   const navigate = useNavigate()
   return (
     <div className={styles.home_page}>
@@ -31,6 +32,6 @@ const HomePage = () => {
       </div>
     </div>
   );
-}
+})
 
 export default HomePage;

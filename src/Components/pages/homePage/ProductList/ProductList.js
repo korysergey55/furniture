@@ -1,18 +1,24 @@
 import React from 'react'
-import styles from './styles.module.scss'
+import { observer } from 'mobx-react';
+import { useStore } from '../../../../storeMobx';
+import { toJS } from 'mobx';
+import { v4 as uuidv4 } from 'uuid';
 
-import { productsArr } from '../../../../sourses/products/products'
+import styles from './styles.module.scss'
 import ProductItem from './ProductItem/ProductItem';
 
-const ProductList = () => {
+const ProductList = observer(() => {
+  const { PartfolioStore } = useStore()
+  const { products } = PartfolioStore
+  // const items = JSON.parse(JSON.stringify(products))
+  // console.log(items)
   return (
     <ul className={styles.produc_list}>
-      {productsArr.map((product, index) =>
-        (<ProductItem item={product} key={index} />)
-      )
-      }
+      {toJS(products).map((product) =>
+        (<ProductItem item={product} key={uuidv4()} />)
+      )}
     </ul>
   );
-}
+})
 
 export default ProductList;

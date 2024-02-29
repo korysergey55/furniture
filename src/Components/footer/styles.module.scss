@@ -144,9 +144,17 @@
       gap: 30px;
       margin-top: 10px;
 
-      .icon {
-        width: 32px;
-        height: 32px;
+      .link {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .icon {
+          width: 32px;
+          height: 32px;
+        }
       }
     }
   }
@@ -190,6 +198,12 @@
         }
         .social_list {
           gap: 30px;
+          .link {
+            transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+          }
+          .link:hover {
+            transform: scale(1.1);
+          }
         }
       }
     }

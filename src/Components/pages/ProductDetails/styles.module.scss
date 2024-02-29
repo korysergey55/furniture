@@ -1,0 +1,50 @@
+.comtainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 15px;
+
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .discription {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .imageList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .imageItem {
+      width: 300px;
+      border-radius: 3px;
+      overflow: hidden;
+
+      .image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

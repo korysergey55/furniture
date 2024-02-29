@@ -1,3 +1,5 @@
+@import '../../../../sourses/styles/variebles.scss';
+
 .produc_list {
   display: flex;
   justify-content: center;
@@ -8,13 +10,10 @@
 
   padding-top: 50px;
   padding-bottom: 50px;
+  background-color: rgb(218, 218, 218);
 }
 @media screen and (min-width: 768px) {
   .produc_list {
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
   }
 }

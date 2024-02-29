@@ -1,13 +1,12 @@
 .item {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   gap: 20px;
 
   width: 100%;
   max-width: 350px;
-  height: 100%;
   min-height: 485px;
   padding: 20px;
 
@@ -26,6 +25,8 @@
     text-align: center;
   }
   .discription {
+    display: inline-block;
+    min-height: 80px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -37,7 +38,7 @@
     width: 150px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .item {
     width: 405px;
     min-height: 550px;

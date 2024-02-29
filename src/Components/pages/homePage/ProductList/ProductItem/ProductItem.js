@@ -11,7 +11,8 @@ const ProductItem = ({ item }) => {
     <li className={styles.item}>
       <img
         className={styles.image}
-        src={item.src || defaultImage} alt={item.productName || 'image'}
+        src={item.src || defaultImage}
+        alt={item.productName + 'image' || 'image'}
         onClick={() => navigate(`${pathes.portfolio}/${item.path}`)} />
       <h3 className={styles.title}>{item.productName}</h3>
       <p className={styles.discription}>{item.discription}</p>

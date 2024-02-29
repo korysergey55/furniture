@@ -1,10 +1,9 @@
 import React, { Suspense, lazy } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import { observer } from 'mobx-react'
 import { useStore } from '../../storeMobx';
 
-import history from '../../utiles/history/history'
 import { pathes } from '../../utiles/pathes/pathes'
 
 import Header from '../header/Header';
@@ -26,7 +25,7 @@ const App = observer(() => {
   const { MobileModalStore } = useStore()
   const { modal } = MobileModalStore
   return (
-    <BrowserRouter history={history}>
+    <div>
       <Headroom>
         <Header />
       </Headroom>
@@ -38,14 +37,13 @@ const App = observer(() => {
           <Route exact={true} path={pathes.process} element={<ProcessPage />} ></Route>
           <Route exact={true} path={pathes.portfolio} element={<PortfolioPage />} ></Route>
           <Route exact={true} path={pathes.contact} element={<ContactPage />} ></Route>
-          <Route exact={false} path='/portfolio/:productDetails' element={<ProductDetails />} ></Route>
-          <Route exact={false} path='/:notFound' element={<NotFoundPage />} ></Route>
+          <Route exact={false} path={`${pathes.portfolio}/:productDetailsName`} element={<ProductDetails />} ></Route>
+          <Route exact={false} path='*' element={<NotFoundPage />} ></Route>
         </Routes>
       </Suspense>
-      <Footer></Footer>
-      {/* <Loader /> */}
+      <Footer />
       {modal ? <MobileModalMenu /> : null}
-    </BrowserRouter>
+    </div>
   );
 })
 
