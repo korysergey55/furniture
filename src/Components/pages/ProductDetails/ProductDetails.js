@@ -7,6 +7,12 @@ import styles from './styles.module.scss'
 import { v4 as uuidv4 } from 'uuid';
 
 import Lightbox from "yet-another-react-lightbox";
+import Captions from "yet-another-react-lightbox/plugins/captions";
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import Video from "yet-another-react-lightbox/plugins/video";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 const ProductDetails = observer(() => {
   const { productDetailsName } = useParams()
@@ -28,10 +34,9 @@ const ProductDetails = observer(() => {
     }
   }, [product])
 
-
   return (
     <div className={styles.productDetails}>
-      <div className={styles.comtainer}>
+      <div className={styles.container}>
         <h2 className={styles.title}>{product.productName}</h2>
         <p className={styles.discription}>{product.discription}</p>
         <ul className={styles.imageList}>
@@ -55,6 +60,8 @@ const ProductDetails = observer(() => {
         open={open}
         close={() => setOpen(false)}
         slides={[...imagesG]}
+        plugins={[Captions, Fullscreen, Slideshow, Video, Zoom]}
+
       />
     </div>
   );
