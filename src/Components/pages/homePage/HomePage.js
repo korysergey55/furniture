@@ -19,7 +19,7 @@ const HomePage = observer(() => {
             <br />
             With manufacturing facility in Cheadle we cover all surrounding areas producing tailor-made solutions for   both private and commercial sectors.
             <br />
-            NARS furniture's goal is to create an environment where our clients feel happy, a place that reflects theirindividuality. This we perform with meticulous attention to detail.
+            NARS furniture's goal is to create an environment where our clients feel happy, a place that reflects their individuality. This we perform with meticulous attention to detail.
           </p>
           <button
             type='button'
