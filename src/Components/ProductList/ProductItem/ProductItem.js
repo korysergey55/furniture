@@ -1,9 +1,9 @@
 import React from 'react'
 import { useNavigate } from 'react-router';
-import { pathes } from '../../../../../utiles/pathes/pathes';
+import { pathes } from '../../../utiles/pathes/pathes';
 
 import styles from './styles.module.scss'
-import defaultImage from '../../../../../sourses/images/hero/product-image.jpg'
+import defaultImage from '../../../sourses/images/products/image-1.jpg'
 
 const ProductItem = ({ item }) => {
   const navigate = useNavigate()

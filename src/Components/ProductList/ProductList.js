@@ -1,6 +1,6 @@
 import React from 'react'
 import { observer } from 'mobx-react';
-import { useStore } from '../../../../storeMobx';
+import { useStore } from '../../storeMobx/index';
 import { toJS } from 'mobx';
 import { v4 as uuidv4 } from 'uuid';
 

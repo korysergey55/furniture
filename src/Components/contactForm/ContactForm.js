@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useStore } from '../../../../storeMobx'
-import scrollController from '../../../../utiles/scrollController/scrollController'
+import { useStore } from '../../storeMobx/index'
+import scrollController from '../../utiles/scrollController/scrollController'
 
 import styles from './styles.module.scss'
-import Loader from '../../../loader/Loader'
+import Loader from '../loader/Loader'
 
 const INITIAL_STATE = {
   firstName: '',

@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './styles.module.scss'
-import developmentImage from '../../../sourses/images/process/development.jpg'
-import productionImage from '../../../sourses/images/process/production.webp'
-import instaletionImage from '../../../sourses/images/process/instaletion.jpg'
+
+import developmentImage from '../../sourses/images/process/development.jpg'
+import productionImage from '../../sourses/images/process/production.webp'
+import instaletionImage from '../../sourses/images/process/instaletion.jpg'
 
 const ProcessPage = () => {
   return (
@@ -14,7 +15,7 @@ const ProcessPage = () => {
           <div className={styles.imageWripper}>
             <img className={styles.image} src={developmentImage} alt='production' />
             <p className={styles.text}>
-              Each project begins with a discussion with the client and we listen carefully to their ideas, wishes and      dreams. Before proceeding to the technical part: taking detailed measurements, design and calculation of the costs. Once the client approved the final version, we move on to the implementation stage.
+              Each project begins with a discussion with the client and we listen carefully to their ideas, wishes and dreams. Before proceeding to the technical part: taking detailed measurements, design and calculation of the costs. Once the client approved the final version, we move on to the implementation stage.
             </p>
           </div>
         </div>

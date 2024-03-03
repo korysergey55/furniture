@@ -1,10 +1,10 @@
 import React from 'react'
-import ContactForm from './contactForm/ContactForm';
+import ContactForm from '../../Components/contactForm/ContactForm';
 
 import styles from './styles.module.scss'
-import sprite from '../../../sourses/icons/sprite.svg'
-import { contactInfo } from '../../../utiles/contactInfo/contactInfo';
-import InstaIcon from '../../icons/InstaIcon';
+import sprite from '../../sourses/icons/sprite.svg'
+import { contactInfo } from '../../utiles/contactInfo/contactInfo';
+import InstaIcon from '../../Components/icons/InstaIcon';
 
 const ContactsPage = () => {
   return (

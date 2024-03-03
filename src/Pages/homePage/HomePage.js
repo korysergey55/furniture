@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from './styles.module.scss'
+
 import { observer } from 'mobx-react';
 import { useNavigate } from 'react-router';
-import { pathes } from '../../../utiles/pathes/pathes'
-import ProductList from './ProductList/ProductList';
+import { pathes } from '../../utiles/pathes/pathes'
+
+import ProductList from '../../Components/ProductList/ProductList';
 
 const HomePage = observer(() => {
   const navigate = useNavigate()

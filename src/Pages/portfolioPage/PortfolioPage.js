@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './styles.module.scss'
 import { observer } from 'mobx-react';
-import { useStore } from '../../../storeMobx';
-import ProductList from '../homePage/ProductList/ProductList';
+
+import ProductList from '../../Components/ProductList/ProductList';
 
 const PortfolioPage = observer(() => {
   return (
