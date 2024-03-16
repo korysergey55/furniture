@@ -14,7 +14,6 @@ import Loader from '../loader/Loader';
 const SharedLayout = lazy(() => import('../../Components/SharedLayout/SharedLayout'))
 const HomePage = lazy(() => import('../../Pages/homePage/HomePage'))
 const AboutUs = lazy(() => import('../../Pages/aboutUsPage/AboutUsPage'))
-const ServicesPage = lazy(() => import('../../Pages/ServicesPage/ServicesPage'))
 const ProcessPage = lazy(() => import('../../Pages/processPage/ProcessPage'))
 const PortfolioPage = lazy(() => import('../../Pages/portfolioPage/PortfolioPage'))
 const ContactPage = lazy(() => import('../../Pages/contactPage/ContactPage'))
@@ -22,8 +21,8 @@ const ProductDetails = lazy(() => import('../../Pages/ProductDetails/ProductDeta
 const NotFoundPage = lazy(() => import('../../Pages/notFoundPage/NotFoundPage'))
 
 const App = observer(() => {
-  const { MobileModalStore } = useStore()
-  const { modal } = MobileModalStore
+  const { PartfolioStore } = useStore()
+  const { modal } = PartfolioStore
   return (
     <div>
       <Headroom>
@@ -34,7 +33,6 @@ const App = observer(() => {
           <Route path='/' element={<SharedLayout />} >
             <Route path={pathes.home} element={<HomePage />} ></Route>
             <Route path={pathes.about} element={<AboutUs />} ></Route>
-            <Route path={pathes.services} element={<ServicesPage />} ></Route>
             <Route path={pathes.process} element={<ProcessPage />} ></Route>
             <Route path={pathes.portfolio} element={<PortfolioPage />} ></Route>
             <Route path={pathes.contact} element={<ContactPage />} ></Route>

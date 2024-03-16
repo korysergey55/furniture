@@ -11,10 +11,10 @@ import sprite from '../../sourses/icons/sprite.svg'
 import InstaIcon from '../icons/InstaIcon'
 
 const MobileModalMenu = observer(() => {
-  const { MobileModalStore } = useStore()
+  const { PartfolioStore } = useStore()
 
   const hadleModal = () => {
-    MobileModalStore.setModal()
+    PartfolioStore.setModal()
   }
   return (
     <div className={styles.nav_wripper_mobile}>
@@ -41,15 +41,6 @@ const MobileModalMenu = observer(() => {
             onClick={hadleModal}
           >
             About
-          </NavLink>
-        </li>
-        <li className={styles.item}>
-          <NavLink
-            to={pathes.services}
-            className={(navData) => navData.isActive ? styles.active : styles.nav_link}
-            onClick={hadleModal}
-          >
-            Services
           </NavLink>
         </li>
         <li className={styles.item}>

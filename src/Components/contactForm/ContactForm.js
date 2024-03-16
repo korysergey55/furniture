@@ -14,7 +14,7 @@ const INITIAL_STATE = {
 }
 
 const ContactForm = () => {
-  const { ContactFormStore } = useStore()
+  const { PartfolioStore } = useStore()
   const [state, setState] = useState({ ...INITIAL_STATE })
   const [loader, setLoader] = useState(false)
 
@@ -37,7 +37,7 @@ const ContactForm = () => {
   const submitNewMassage = async () => {
     try {
       setLoader(true)
-      await ContactFormStore.setUserData(state)
+      await PartfolioStore.setUserMessage(state)
       setState({ ...INITIAL_STATE })
       setLoader(false)
     }

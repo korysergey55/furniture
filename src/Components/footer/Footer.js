@@ -4,6 +4,8 @@ import InstaIcon from '../icons/InstaIcon'
 
 import styles from './styles.module.scss'
 import sprite from '../../sourses/icons/sprite.svg'
+import FooterForm from './footerForm/FooterForm'
+
 
 
 const Footer = () => {
@@ -54,23 +56,7 @@ const Footer = () => {
           </li>
         </ul>
         <div className={styles.form_wripper}>
-          <form className={styles.footer_form} id='footer-form'>
-            <label className={styles.label} htmlFor='phone'>Call back</label>
-            <input className={styles.input}
-              name='phone'
-              type='tel'
-              id='phone'
-              placeholder='Enter phone number please'
-              required
-              pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
-              title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-            />
-            <button className={styles.button}
-              type='button'
-              name='form-button'
-              htmlFor='footer-form'
-            >SEND</button>
-          </form>
+          <FooterForm />
         </div>
         <div className={styles.social_wripper}>
           <h3 className={styles.social_title}>Follow us</h3>

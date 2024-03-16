@@ -11,8 +11,8 @@ import sprite from '../../sourses/icons/sprite.svg'
 import classnames from 'classnames'
 
 const Header = observer(() => {
-  const { MobileModalStore } = useStore()
-  const { modal } = MobileModalStore
+  const { PartfolioStore } = useStore()
+  const { modal } = PartfolioStore
   const location = useLocation()
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const Header = observer(() => {
   }, [location.pathname])
 
   const handleMobileMenu = () => {
-    MobileModalStore.setModal()
+    PartfolioStore.setModal()
   }
 
   return (
