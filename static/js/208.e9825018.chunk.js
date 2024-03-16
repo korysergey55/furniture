@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkfurniture=self.webpackChunkfurniture||[]).push([[208],{5208:(e,s,c)=>{c.r(s),c.d(s,{default:()=>i});c(9060);const r={};var a=c(2496);const i=()=>(0,a.jsx)("div",{className:r.products,children:(0,a.jsx)("div",{className:r.comtainer,children:(0,a.jsx)("h2",{children:"ServicesPage"})})})}}]);
-//# sourceMappingURL=208.e9825018.chunk.js.map
