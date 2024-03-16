@@ -1,38 +1,43 @@
-import Image from '../../sourses/images/hero/desktop/hero-dasktop-1.jpg'
-import Image1 from '../images/products/image-1.jpg'
-import Image2 from '../images/products/image-2.jpg'
-import Image3 from '../images/products/image-3.jpg'
-import Image4 from '../images/products/image-4.jpg'
+import { bespokeImagesArr } from '../images/products/bespoke/bespokeImagesArr'
+import { cabinetsImagesArr } from '../images/products/cabinets/cabinetsImagesArr'
+import { kitchenImagesArr } from '../images/products/kitchen/kitchenImagesArr'
+import { wardbordsImagesArr } from '../images/products/wardrobes/wardbordsImagesArr'
 
 const productsArr = [
   {
-    src: Image1,
-    path: 'wardrobes',
-    productName: 'Wardrobes',
-    discription: 'Fitted Wardrobes made to fit the space available.',
-    images: [Image1, Image1, Image1, Image1, Image1]
-  },
-  {
-    src: Image2,
-    path: 'alcove',
-    productName: 'Alcove Cabinets',
-    discription: 'Fitted Alcove Cabinets to fully utilise those awkward spaces.',
-    images: [Image2, Image2]
-  },
-  {
-    src: Image3,
-    path: 'fitted',
-    productName: 'Fitted Cabinets',
-    discription: 'Home office, Boot rooms, kitchens and more.We can make storage for any space in your home.',
-    images: [Image3, Image3, Image3, Image3]
-  },
-  {
-    src: Image4,
-    path: 'cabinets',
     productName: 'Cabinets',
+    title: 'Bespoke fitted cabinets',
     discription: 'Home office, Boot rooms, kitchens and more.We can make storage for any space in your home.',
-    images: [Image4, Image4, Image4]
+    path: 'cabinets',
+    image: cabinetsImagesArr[0],
+    images: [...cabinetsImagesArr]
   },
+  {
+    productName: 'Kitchen',
+    title: 'Custom made kitchens',
+    discription: 'Fitted Kitchen to fully utilise those awkward spaces.',
+    path: 'kitchen',
+    image: kitchenImagesArr[0],
+    images: [...kitchenImagesArr]
+  },
+  {
+    productName: 'Wardrobes',
+    title: 'Individual storage solution',
+    discription: 'Fitted Wardrobes made to fit the space available.',
+    path: 'wardrobes',
+    image: wardbordsImagesArr[0],
+    images: [...wardbordsImagesArr]
+  },
+
+  {
+    productName: 'Bespoke furniture',
+    title: 'Other projects',
+    discription: 'Home office, Boot rooms, kitchens and more.We can make storage for any space in your home.',
+    path: 'bespoke',
+    image: bespokeImagesArr[0],
+    images: [...bespokeImagesArr]
+  },
+
 ]
 
 export { productsArr }

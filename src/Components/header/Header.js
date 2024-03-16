@@ -4,11 +4,11 @@ import { useStore } from '../../storeMobx'
 
 import { NavLink, useLocation } from 'react-router-dom'
 import { pathes } from '../../utiles/pathes/pathes'
+import scrollController from '../../utiles/scrollController/scrollController'
 
 import styles from './styles.module.scss'
 import sprite from '../../sourses/icons/sprite.svg'
 import classnames from 'classnames'
-import scrollController from '../../utiles/scrollController/scrollController'
 
 const Header = observer(() => {
   const { MobileModalStore } = useStore()
@@ -57,14 +57,6 @@ const Header = observer(() => {
               className={(navData) => navData.isActive ? styles.active : styles.nav_link}
             >
               About
-            </NavLink>
-          </li>
-          <li className={styles.item}>
-            <NavLink
-              to={pathes.services}
-              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
-            >
-              Services
             </NavLink>
           </li>
           <li className={styles.item}>

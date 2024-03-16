@@ -10,8 +10,7 @@ import ProductItem from './ProductItem/ProductItem';
 const ProductList = observer(() => {
   const { PartfolioStore } = useStore()
   const { products } = PartfolioStore
-  // const items = JSON.parse(JSON.stringify(products))
-  // console.log(items)
+
   return (
     <ul className={styles.produc_list}>
       {toJS(products).map((product) =>

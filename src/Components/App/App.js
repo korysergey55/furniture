@@ -3,17 +3,15 @@ import { Route, Routes } from 'react-router-dom';
 
 import { observer } from 'mobx-react'
 import { useStore } from '../../storeMobx';
-
 import { pathes } from '../../utiles/pathes/pathes'
 
 import Header from '../header/Header';
 import Headroom from 'react-headroom';
-// import Footer from '../footer/Footer';
+
 import MobileModalMenu from '../MobileModalMenu/MobileModalMenu';
 import Loader from '../loader/Loader';
 
-// import SharedLayout from '../SharedLayout/SharedLayout';
-
+const SharedLayout = lazy(() => import('../../Components/SharedLayout/SharedLayout'))
 const HomePage = lazy(() => import('../../Pages/homePage/HomePage'))
 const AboutUs = lazy(() => import('../../Pages/aboutUsPage/AboutUsPage'))
 const ServicesPage = lazy(() => import('../../Pages/ServicesPage/ServicesPage'))
@@ -22,9 +20,6 @@ const PortfolioPage = lazy(() => import('../../Pages/portfolioPage/PortfolioPage
 const ContactPage = lazy(() => import('../../Pages/contactPage/ContactPage'))
 const ProductDetails = lazy(() => import('../../Pages/ProductDetails/ProductDetails'))
 const NotFoundPage = lazy(() => import('../../Pages/notFoundPage/NotFoundPage'))
-
-const Footer = lazy(() => import('../../Components/footer/Footer'))
-const SharedLayout = lazy(() => import('../../Components/SharedLayout/SharedLayout'))
 
 const App = observer(() => {
   const { MobileModalStore } = useStore()
@@ -48,7 +43,7 @@ const App = observer(() => {
           </Route>
         </Routes>
       </Suspense>
-      {/* <Footer /> */}
+      {/* <Loader /> */}
       {modal ? <MobileModalMenu /> : null}
     </div>
   );

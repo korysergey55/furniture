@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from "react-router-dom";
+import styles from './styles.module.scss'
+
 import { observer } from 'mobx-react';
 import { useStore } from '../../storeMobx';
 import { toJS } from 'mobx';
-import styles from './styles.module.scss'
+
+import { useParams } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 
 import Lightbox from "yet-another-react-lightbox";
@@ -18,8 +20,8 @@ const ProductDetails = observer(() => {
   const { PartfolioStore } = useStore()
   const [product, setProduct] = useState({})
 
-  const [open, setOpen] = useState(false);
   const [images, setImages] = useState([]);
+  const [index, setIndex] = useState(-1);
 
   useEffect(() => {
     if (productDetailsName) {
@@ -29,26 +31,28 @@ const ProductDetails = observer(() => {
 
   useEffect(() => {
     if (product && product.images) {
-      setImages(product?.images?.map((item) => ({ src: item })))
+      setImages(product?.images?.map((item) => ({ src: item.src })))
     }
+
   }, [product])
 
   return (
     <div className={styles.productDetails}>
       <div className={styles.container}>
-        <h2 className={styles.title}>{product.productName}</h2>
-        <p className={styles.discription}>{product.discription}</p>
+        <h2 className={styles.title}>{product?.productName}</h2>
+        <p className={styles.discription}>{product?.title}</p>
         <ul className={styles.imageList}>
-          {product && product.images && product.images.map((item) => (
+          {product && product.images && product.images.map((item, index) => (
             <li
               className={styles.imageItem}
-              onClick={() => setOpen(true)}
               key={uuidv4()}
+              onClick={() => setIndex(index)}
             >
               <img
                 className={styles.image}
-                src={item}
-                alt={product.productName + 'image' || 'image'}
+                srcSet={`${item.srcset} 2x`}
+                src={item.src}
+                alt={product.productName + 'image'}
               />
             </li>
           ))}
@@ -56,11 +60,11 @@ const ProductDetails = observer(() => {
       </div>
 
       <Lightbox
-        open={open}
-        close={() => setOpen(false)}
+        index={index}
+        open={index >= 0}
+        close={() => setIndex(-1)}
         slides={[...images]}
         plugins={[Captions, Fullscreen, Slideshow, Video, Zoom]}
-
       />
     </div>
   );

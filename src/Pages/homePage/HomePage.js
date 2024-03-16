@@ -16,12 +16,13 @@ const HomePage = observer(() => {
         <div className={styles.wripper}>
           <h2 className={styles.title}> Bespoke Fitted Furniture</h2>
           <p className={styles.discription}>
-            NARS furniture is a bespoke furniture company. We pride ourselves in top quality joinery and finishing
-            services.
+            Vitaly furniture is a small family business that was founded in 2017. Our commitment to innovation in
+            production is the key to the best quality product. We have implemented many projects developed in collaboration with our in-house designers and architects.
             <br />
-            With manufacturing facility in Cheadle we cover all surrounding areas producing tailor-made solutions for   both private and commercial sectors.
+            We are a bespoke furniture & joinery company, that prides ourselves on providing only the very best quality products and service to our clients. From design to installation we take care of everything ensuring impeccable quality for both product and service. Services Provided 3D design and interior design Free standing and fitted furniture. First, second and final fix joinery.
             <br />
-            NARS furniture's goal is to create an environment where our clients feel happy, a place that reflects their individuality. This we perform with meticulous attention to detail.
+
+            Areas Served Cheshire, Manchester mainly but also nationwide in the private and commercial sector.
           </p>
           <button
             type='button'

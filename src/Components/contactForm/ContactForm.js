@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import styles from './styles.module.scss'
+
 import { useStore } from '../../storeMobx/index'
 import scrollController from '../../utiles/scrollController/scrollController'
 
-import styles from './styles.module.scss'
 import Loader from '../loader/Loader'
 
 const INITIAL_STATE = {
@@ -42,6 +43,7 @@ const ContactForm = () => {
     }
     catch (error) {
       console.log(error)
+      setLoader(false)
     }
     finally {
       setLoader(false)
