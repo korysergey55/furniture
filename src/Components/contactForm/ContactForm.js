@@ -37,7 +37,7 @@ const ContactForm = () => {
   const submitNewMassage = async () => {
     try {
       setLoader(true)
-      await PartfolioStore.setUserMessage(state)
+      await PartfolioStore.setUserMessageAPI(state)
       setState({ ...INITIAL_STATE })
       setLoader(false)
     }

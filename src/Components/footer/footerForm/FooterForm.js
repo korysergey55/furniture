@@ -10,12 +10,14 @@ const FooterForm = observer(() => {
 
   const handleChange = (evt) => {
     setState({ phoneNumber: evt.target.value })
+    // PartfolioStore.setAllProductsAPI()
   }
 
   const handleSubmit = () => {
-    PartfolioStore.setFooterFormPhone(state)
+    PartfolioStore.setFooterFormPhoneAPI(state)
     setState({ phoneNumber: '' })
   }
+
 
   return (
     <form className={styles.footerForm} id='footer-form' >

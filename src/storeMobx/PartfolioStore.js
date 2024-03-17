@@ -28,8 +28,8 @@ class PartfolioStore {
       setAllProducts: action,
       getAllProducts: action,
       getProduct: action,
-      setUserMessage: action,
-      setFooterFormPhone: action
+      setUserMessageAPI: action,
+      setFooterFormPhoneAPI: action
     });
 
     reaction(
@@ -54,7 +54,7 @@ class PartfolioStore {
     return product
   };
 
-  setUserMessage = async (data) => {
+  setUserMessageAPI = async (data) => {
     this.contactFormMassage = data;
     try {
       const response = axios.post(`${BASE_URL}userMessage/.json`, data)
@@ -63,10 +63,19 @@ class PartfolioStore {
       throw new Error(error)
     }
   }
-  setFooterFormPhone = async (data) => {
+  setFooterFormPhoneAPI = async (data) => {
     this.footerFormPhone = data;
     try {
       const response = axios.post(`${BASE_URL}callBackPhoneNumber/.json`, data)
+      return response
+    } catch (error) {
+      throw new Error(error)
+    }
+  }
+  setAllProductsAPI = async (data = []) => {
+    data = [...productsArr]
+    try {
+      const response = axios.post(`${BASE_URL}products/.json`, data)
       return response
     } catch (error) {
       throw new Error(error)

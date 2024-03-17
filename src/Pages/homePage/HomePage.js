@@ -20,7 +20,7 @@ const HomePage = observer(() => {
             services.
             With manufacturing facility in Cheadle we cover all surrounding areas producing tailor-made solutions
             for both private and commercial sectors.
-            Vitaly furniture’s goal is to create an environment where our clients feel happy, a place that reflects their  individuality.
+            Vitaly furniture's goal is to create an environment where our clients feel happy, a place that reflects their  individuality.
             This we perform with meticulous attention to detail.
           </p>
           <button
