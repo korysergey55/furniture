@@ -12,9 +12,9 @@ const ContactsPage = () => {
       <div className={styles.container}>
         <h2 className={styles.title}>Contact</h2>
         <p className={styles.discription}>
-          Get in touch to discuss your ideas. Any pictures and dimensions
-          of the space would be great upon first contact to help with a guide
-          price etc. Feel free to give me a call, text or email  - whichever is most convenient.
+          Get in touch to discuss your ideas. Any pictures and dimensions of the space would be great upon first contact to help with a guide price etc.
+          <br />
+          Feel free to give me a call, text or email  - whichever is most convenient.
         </p>
         <div className={styles.form_wripper}>
           <h3 className={styles.form_title}>Get in Touch</h3>

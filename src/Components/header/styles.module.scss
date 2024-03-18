@@ -1,14 +1,6 @@
 @import '../../sourses/styles/variebles.scss';
 
 .header {
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // z-index: 100;
-  // transition: top 0.2s ease-in-out;
-  // overflow: hidden;
-
   width: 100%;
   min-height: 72px;
   border-bottom: 1px solid white;
@@ -24,6 +16,23 @@
     width: 100%;
     padding: 10px 15px;
     margin: 0 auto;
+
+    .logo_text {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 0.03em;
+      color: #4d5ae5;
+    }
+    .logo_text_acsent {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 0.03em;
+      text-align: center;
+      color: white;
+    }
 
     .logo {
       display: flex;

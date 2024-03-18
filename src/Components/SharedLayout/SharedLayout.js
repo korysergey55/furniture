@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../footer/Footer";
+import styles from './styles.module.scss'
 
 const SharedLayout = () => {
   return (
-    <div className="sharedLayoutContainer">
+    <div className={styles.shared_layout_container}>
       <Outlet />
       <Footer />
     </div>

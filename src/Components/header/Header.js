@@ -37,11 +37,17 @@ const Header = observer(() => {
   return (
     <div className={styles.header}>
       <div className={styles.container}>
-        <a className={styles.logo} href={pathes.home}>
-          <svg className={styles.logo_icon} aria-label="logo icon">
+        <NavLink className={styles.logo} to={pathes.home}>
+          <svg className={styles.logo_icon} aria-label="furniture logo icon">
             <use href={sprite + '#icon-logo'}></use>
           </svg>
-        </a>
+        </NavLink>
+        {/* <NavLink
+          className={styles.logo_text}
+          to={pathes.home}
+        >VITALY
+          <span className={styles.logo_text_acsent}> FURNITURE</span>
+        </NavLink> */}
         <ul className={styles.nav_list}>
           <li className={styles.item}>
             <NavLink

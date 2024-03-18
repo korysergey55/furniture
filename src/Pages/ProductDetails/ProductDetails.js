@@ -37,14 +37,14 @@ const ProductDetails = observer(() => {
   }, [product])
 
   return (
-    <div className={styles.productDetails}>
+    <div className={styles.product_details}>
       <div className={styles.container}>
         <h2 className={styles.title}>{product?.productName}</h2>
         <p className={styles.discription}>{product?.title}</p>
-        <ul className={styles.imageList}>
+        <ul className={styles.images_list}>
           {product && product.images && product.images.map((item, index) => (
             <li
-              className={styles.imageItem}
+              className={styles.image_item}
               key={uuidv4()}
               onClick={() => setIndex(index)}
             >

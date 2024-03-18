@@ -31,13 +31,13 @@ const App = observer(() => {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path='/' element={<SharedLayout />} >
-            <Route path={pathes.home} element={<HomePage />} ></Route>
-            <Route path={pathes.about} element={<AboutUs />} ></Route>
-            <Route path={pathes.process} element={<ProcessPage />} ></Route>
-            <Route path={pathes.portfolio} element={<PortfolioPage />} ></Route>
-            <Route path={`${pathes.portfolio}/:productDetailsName`} element={<ProductDetails />} ></Route>
-            <Route path={pathes.contact} element={<ContactPage />} ></Route>
-            <Route path='*' element={<NotFoundPage />} ></Route>
+            <Route path={pathes.home} element={<HomePage />} />
+            <Route path={pathes.about} element={<AboutUs />} />
+            <Route path={pathes.process} element={<ProcessPage />} />
+            <Route path={pathes.portfolio} element={<PortfolioPage />} />
+            <Route path={`${pathes.portfolio}/:productDetailsName`} element={<ProductDetails />} />
+            <Route path={pathes.contact} element={<ContactPage />} />
+            <Route path='*' element={<NotFoundPage />} />
           </Route>
         </Routes>
       </Suspense>

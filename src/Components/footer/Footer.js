@@ -1,11 +1,12 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { contactInfo } from '../../utiles/contactInfo/contactInfo'
-import InstaIcon from '../icons/InstaIcon'
-
-import styles from './styles.module.scss'
-import sprite from '../../sourses/icons/sprite.svg'
+import { pathes } from '../../utiles/pathes/pathes'
 import FooterForm from './footerForm/FooterForm'
 
+import InstaIcon from '../icons/InstaIcon'
+import styles from './styles.module.scss'
+import sprite from '../../sourses/icons/sprite.svg'
 
 
 const Footer = () => {
@@ -13,9 +14,12 @@ const Footer = () => {
     <div className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.logo_wripper}>
-          <a className={styles.logo_footer} href="/"
-          >THE BEST<span className={styles.logo_footer_acsent}> FURNITURE</span>
-          </a>
+          <NavLink
+            className={styles.logo_footer}
+            to={pathes.home}
+          >VITALY
+            <span className={styles.logo_footer_acsent}> FURNITURE</span>
+          </NavLink>
           <p className={styles.text}>
             Specialising in bespoke fitted wardrobes and furniture
           </p>
@@ -23,7 +27,7 @@ const Footer = () => {
         <ul className={styles.contacts}>
           <li className={styles.item}>
             <a className={styles.link}
-              href={`https://maps.app.goo.gl/HxPhiiuEMtVVrEKU9`}
+              href={contactInfo.location}
               target="_blank"
               rel="noopener noreferrer"
             > <svg className={styles.icon} aria-label="location icon">
@@ -84,7 +88,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.copy_right}>
-        <p className={styles.copy_right_text}>&#169; 2024 NARS furniture. All Rights Reserved </p>
+        <p className={styles.copy_right_text}>&#169; 2024 VITALY furniture. All Rights Reserved </p>
       </div>
     </div >
   );
