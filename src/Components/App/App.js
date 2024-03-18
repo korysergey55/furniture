@@ -35,8 +35,8 @@ const App = observer(() => {
             <Route path={pathes.about} element={<AboutUs />} ></Route>
             <Route path={pathes.process} element={<ProcessPage />} ></Route>
             <Route path={pathes.portfolio} element={<PortfolioPage />} ></Route>
-            <Route path={pathes.contact} element={<ContactPage />} ></Route>
             <Route path={`${pathes.portfolio}/:productDetailsName`} element={<ProductDetails />} ></Route>
+            <Route path={pathes.contact} element={<ContactPage />} ></Route>
             <Route path='*' element={<NotFoundPage />} ></Route>
           </Route>
         </Routes>

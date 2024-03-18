@@ -10,17 +10,16 @@ const FooterForm = observer(() => {
 
   const handleChange = (evt) => {
     setState({ phoneNumber: evt.target.value })
-    // PartfolioStore.setAllProductsAPI()
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (evt) => {
+    evt.preventDefault()
     PartfolioStore.setFooterFormPhoneAPI(state)
     setState({ phoneNumber: '' })
   }
 
-
   return (
-    <form className={styles.footerForm} id='footer-form' >
+    <form className={styles.footerForm} id='footer-form' onSubmit={handleSubmit}>
       <label className={styles.label} htmlFor='phone'>Call back</label>
       <input className={styles.input}
         name='phone'
@@ -34,10 +33,9 @@ const FooterForm = observer(() => {
         onChange={handleChange}
       />
       <button className={styles.button}
-        type='button'
+        type='submit'
         name='form-button'
         htmlFor='footer-form'
-        onClick={handleSubmit}
       >
         SEND
       </button>

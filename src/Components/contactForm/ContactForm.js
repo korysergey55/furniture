@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import styles from './styles.module.scss'
-
 import { useStore } from '../../storeMobx/index'
-import scrollController from '../../utiles/scrollController/scrollController'
 
+import scrollController from '../../utiles/scrollController/scrollController'
 import Loader from '../loader/Loader'
+
+import styles from './styles.module.scss'
 
 const INITIAL_STATE = {
   firstName: '',
@@ -58,7 +58,7 @@ const ContactForm = () => {
   return (
     <form className={styles.form} name='form' id='contactForm' onSubmit={handleSubmit}>
       {loader && <Loader />}
-      <div className={styles.inpurs_container}>
+      <div className={styles.inputs_container}>
         <div className={styles.label_wripper}>
           <label className={styles.label} htmlFor='firstName'>First Name</label>
           <input

@@ -9,7 +9,9 @@ class RootStore {
 }
 
 const rootStore = new RootStore();
+
 export const StoreContext = createContext(rootStore);
+
 export const useStore = () => {
   const store = useContext(StoreContext);
   if (!store) {

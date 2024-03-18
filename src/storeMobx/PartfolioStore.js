@@ -5,8 +5,8 @@ import {
   action,
   reaction,
   toJS,
-  makeAutoObservable
 } from 'mobx';
+
 import { productsArr } from '../sourses/products/products';
 
 const BASE_URL = 'https://vitaly-furniture-default-rtdb.europe-west1.firebasedatabase.app/'
@@ -63,6 +63,7 @@ class PartfolioStore {
       throw new Error(error)
     }
   }
+
   setFooterFormPhoneAPI = async (data) => {
     this.footerFormPhone = data;
     try {
@@ -72,6 +73,7 @@ class PartfolioStore {
       throw new Error(error)
     }
   }
+
   setAllProductsAPI = async (data = []) => {
     data = [...productsArr]
     try {

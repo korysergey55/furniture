@@ -1,39 +1,7 @@
 import React from 'react'
 import styles from './styles.module.scss'
 
-import { useState } from "react";
-import { storage } from '../../Firabase/firabase';
-import { getStorage, ref, getDownloadURL } from "firebase/storage";
-
 const AboutUs = () => {
-  const [state, setState] = useState([])
-
-  // const storage = getStorage();
-  // const gsReference = ref(storage, 'gs://vitaly-furniture.appspot.com/bespoke');
-
-
-  const storage = getStorage();
-  getDownloadURL(ref(storage, 'bespoke/bespoke-image-1.jpg'))
-    .then((url) => {
-      // `url` is the download URL for 'images/stars.jpg'
-
-      // This can be downloaded directly:
-      const xhr = new XMLHttpRequest();
-      xhr.responseType = 'blob';
-      xhr.onload = (event) => {
-        const blob = xhr.response;
-      };
-      xhr.open('GET', url);
-      xhr.send();
-
-      // Or inserted into an <img> element
-      const img = document.getElementById('myimg');
-      img.setAttribute('src', url);
-    })
-    .catch((error) => {
-      // Handle any errors
-    });
-
 
   return (
     <div className={styles.about_us}>
