@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/furniture/static/css/main.e42532f7.css",
-    "main.js": "/furniture/static/js/main.01bd4724.js",
+    "main.js": "/furniture/static/js/main.410c6316.js",
     "static/css/662.f97156c3.chunk.css": "/furniture/static/css/662.f97156c3.chunk.css",
     "static/js/662.141cf22b.chunk.js": "/furniture/static/js/662.141cf22b.chunk.js",
     "static/css/126.fc1009b4.chunk.css": "/furniture/static/css/126.fc1009b4.chunk.css",
@@ -85,7 +85,7 @@
     "static/media/sprite.svg": "/furniture/static/media/sprite.953c854f7914d61b0f0a2c2b8009f25f.svg",
     "index.html": "/furniture/index.html",
     "main.e42532f7.css.map": "/furniture/static/css/main.e42532f7.css.map",
-    "main.01bd4724.js.map": "/furniture/static/js/main.01bd4724.js.map",
+    "main.410c6316.js.map": "/furniture/static/js/main.410c6316.js.map",
     "662.f97156c3.chunk.css.map": "/furniture/static/css/662.f97156c3.chunk.css.map",
     "662.141cf22b.chunk.js.map": "/furniture/static/js/662.141cf22b.chunk.js.map",
     "126.fc1009b4.chunk.css.map": "/furniture/static/css/126.fc1009b4.chunk.css.map",
@@ -106,6 +106,6 @@
   },
   "entrypoints": [
     "static/css/main.e42532f7.css",
-    "static/js/main.01bd4724.js"
+    "static/js/main.410c6316.js"
   ]
 }
