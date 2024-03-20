@@ -6,16 +6,17 @@ import {
   reaction,
   toJS,
 } from 'mobx';
+import { toast } from 'react-toastify';
 
 import { productsArr } from '../sourses/products/products';
 
-const BASE_URL = 'https://vitaly-furniture-default-rtdb.europe-west1.firebasedatabase.app/'
+const BASE_URL = 'https://vitaly-furniture-default-rtdb.europe-west1.firebasedatabase.app/';
 
 class PartfolioStore {
   modal = false;
   products = [...productsArr];
   contactFormMassage = {};
-  footerFormPhone = null
+  footerFormPhone = null;
 
   constructor() {
     makeObservable(this, {
@@ -29,7 +30,7 @@ class PartfolioStore {
       getAllProducts: action,
       getProduct: action,
       setUserMessageAPI: action,
-      setFooterFormPhoneAPI: action
+      setFooterFormPhoneAPI: action,
     });
 
     reaction(
@@ -39,49 +40,55 @@ class PartfolioStore {
   }
   setModal = () => {
     this.modal = !this.modal;
-  }
+  };
 
-  setAllProducts = (data) => {
+  setAllProducts = data => {
     this.products = [...data];
   };
 
   getAllProducts = () => {
-    return this.products
+    return this.products;
   };
 
-  getProduct = (path) => {
-    const product = this.products.find((item) => item.path === path)
-    return product
+  getProduct = path => {
+    const product = this.products.find(item => item.path === path);
+    return product;
   };
 
-  setUserMessageAPI = async (data) => {
+  setUserMessageAPI = async data => {
     this.contactFormMassage = data;
     try {
-      const response = axios.post(`${BASE_URL}userMessage/.json`, data)
-      return response
+      const response = axios.post(`${BASE_URL}userMessage/.json`, data);
+      toast(`Your message has been sent, please wait to contact you`, {
+        theme: 'light',
+      });
+      return response;
     } catch (error) {
-      throw new Error(error)
+      throw new Error(error);
     }
-  }
+  };
 
-  setFooterFormPhoneAPI = async (data) => {
+  setFooterFormPhoneAPI = async data => {
     this.footerFormPhone = data;
     try {
-      const response = axios.post(`${BASE_URL}callBackPhoneNumber/.json`, data)
-      return response
+      const response = axios.post(`${BASE_URL}callBackPhoneNumber/.json`, data);
+      toast(`Your message has been sent, please wait to contact you`, {
+        theme: 'light',
+      });
+      return response;
     } catch (error) {
-      throw new Error(error)
+      throw new Error(error);
     }
-  }
+  };
 
   setAllProductsAPI = async (data = []) => {
-    data = [...productsArr]
+    data = [...productsArr];
     try {
-      const response = axios.post(`${BASE_URL}products/.json`, data)
-      return response
+      const response = axios.post(`${BASE_URL}products/.json`, data);
+      return response;
     } catch (error) {
-      throw new Error(error)
+      throw new Error(error);
     }
-  }
+  };
 }
 export default new PartfolioStore();
