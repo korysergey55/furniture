@@ -10,50 +10,57 @@ import instaletionImage2x from '../../sourses/images/process/instaletion-image@2
 
 const ProcessPage = () => {
   return (
-    <div className={styles.processPage}>
-      <div className={styles.container}>
-        <p className={styles.description}>Our cooperation with clients consists of three main stages</p>
-        <div className={styles.wripper}>
-          <h3 className={styles.title}>DEVELOPMENT</h3>
-          <div className={styles.imageWripper}>
-            <img
-              className={styles.image}
-              srcSet={`${developmentImage2x} 2x`}
-              src={developmentImage}
-              alt='development' />
+    <div className={styles.container}>
+      <h2 className={styles.title}>Our cooperation with clients consists of three main stages</h2>
+      <ul className={styles.list}>
+        <li className={styles.item}>
+          <h3 className={styles.subtitle}>DEVELOPMENT</h3>
+          <div className={styles.wripper}>
+            <div className={styles.image_wripper}>
+              <img
+                className={styles.image}
+                srcSet={`${developmentImage2x} 2x`}
+                src={developmentImage}
+                alt='development'
+              />
+            </div>
             <p className={styles.text}>
-              Each project begins with a discussion with the client and we listen carefully to their ideas, wishes and dreams. Before proceeding to the technical part: taking detailed measurements, design and calculation of the costs. Once the client approved the final version, we move on to the implementation stage.
+              Each project begins with a discussion with the client and we listen carefully to their ideas, wishes and dreams. Before proceeding to the technical part: taking detailed measurements,design and calculation of the costs. Once the client approved the final version, we move on to the implementation stage.
             </p>
           </div>
-        </div>
-        <div className={styles.wripper}>
-          <h3 className={styles.title}>PRODUCTION</h3>
-          <div className={styles.imageWripper}>
-            <img
-              className={styles.image}
-              srcSet={`${productionImage2x} 2x`}
-              src={productionImage}
-              alt='production' />
+        </li>
+        <li className={styles.item}>
+          <h3 className={styles.subtitle}>PRODUCTION</h3>
+          <div className={styles.wripper}>
+            <div className={styles.image_wripper}>
+              <img
+                className={styles.image}
+                srcSet={`${productionImage2x} 2x`}
+                src={productionImage}
+                alt='production'
+              />
+            </div>
             <p className={styles.text}>
-              After receiving the deposit, our professional team begins to bring the ideas to life.
-              All stages of furniture making takes place In our manufacturing facility in Cheadle.
-              From the first precise cut of the chosen material to the finishing touches. As we control and oversee every stage of the manufacturing process we guarantees top quality furniture.
+              After receiving the deposit, our professional team begins to bring the ideas to life. All stages of furniture making takes place In our manufacturing facility in Cheadle. From the first precise cut of the chosen material to the finishing touches. As we control and oversee every stage of the manufacturing process we guarantees top quality furniture.
             </p>
           </div>
-        </div>
-        <div className={styles.wripper}>
-          <h3 className={styles.title}>INSTALLATION</h3>
-          <div className={styles.imageWripper}>
-            <img
-              className={styles.image}
-              srcSet={`${instaletionImage2x} 2x`}
-              src={instaletionImage}
-              alt='instaletion' />
+        </li>
+        <li className={styles.item}>
+          <h3 className={styles.subtitle}>INSTALLATION</h3>
+          <div className={styles.wripper}>
+            <div className={styles.image_wripper}>
+              <img
+                className={styles.image}
+                srcSet={`${instaletionImage2x} 2x`}
+                src={instaletionImage}
+                alt='instaletion'
+              />
+            </div>
             <p className={styles.text}>We prepare meticulously for the final stage of the project. The furniture is delivered and assembled with the uttermost care by our experienced staff. It is a real joy to see the clients dreams come true.
             </p>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   );
 }

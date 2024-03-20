@@ -33,7 +33,6 @@ const ProductDetails = observer(() => {
     if (product && product.images) {
       setImages(product?.images?.map((item) => ({ src: item.src })))
     }
-
   }, [product])
 
   return (

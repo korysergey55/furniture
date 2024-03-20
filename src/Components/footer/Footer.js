@@ -33,7 +33,10 @@ const Footer = () => {
             > <svg className={styles.icon} aria-label="location icon">
                 <use href={sprite + '#icon-location'}></use>
               </svg>
-              {contactInfo.address}
+              {/* {contactInfo.address} */}
+              Manchester Demmings Road
+              <br />
+              Industrial Estate, unit 25. SK8 2PE
             </a>
           </li>
           <li className={styles.item}>
