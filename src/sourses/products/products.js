@@ -19,7 +19,7 @@ const productsArr = [
   {
     productName: 'Cabinets',
     title: 'Bespoke fitted cabinets',
-    discription: 'Home office, Boot rooms, kitchens and more.We can make storage for any space in your home.',
+    discription: 'Bespoke  fitted cabinets',
     path: 'cabinets',
     image: { src: cabinetsImage, srcset: cabinetsImage_2x },
     // images: [...cabinetsImagesArr],
@@ -27,7 +27,7 @@ const productsArr = [
   {
     productName: 'Kitchen',
     title: 'Custom made kitchens',
-    discription: 'Fitted Kitchen to fully utilise those awkward spaces.',
+    discription: 'We will create for you a kitchen with the best functional solutions.',
     path: 'kitchen',
     image: { src: kitchenImage, srcset: kitchenImage_2x },
     // images: [...kitchenImagesArr],
@@ -35,7 +35,7 @@ const productsArr = [
   {
     productName: 'Wardrobes',
     title: 'Individual storage solution',
-    discription: 'Fitted Wardrobes made to fit the space available.',
+    discription: ' Fitted wardrobes creating perfect storage solution.',
     path: 'wardrobes',
     image: { src: wardrobesImage, srcset: wardrobesImage_2x },
     // images: [...wardbordsImagesArr],
@@ -44,7 +44,7 @@ const productsArr = [
   {
     productName: 'Bespoke furniture',
     title: 'Other projects',
-    discription: 'Home office, Boot rooms, kitchens and more.We can make storage for any space in your home.',
+    discription: 'Home office, Boot rooms, kitchens and more. We can make storage for any space in your home.',
     path: 'bespoke',
     image: { src: bespokeImage, srcset: bespokeImage_2x },
     // images: [...bespokeImagesArr],

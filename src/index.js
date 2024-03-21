@@ -17,7 +17,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter history={history}>
     <App />
-    <ToastContainer autoClose={3000} />
+    <ToastContainer autoClose={4000} />
   </BrowserRouter>
 );
 

@@ -21,13 +21,12 @@ import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 const ProductDetails = observer(() => {
   const { productDetailsName } = useParams();
   const { PartfolioStore } = useStore();
-  const [product, setProduct] = useState({});
 
-  const [images, setImages] = useState([]);
+  const [product, setProduct] = useState({});
   const [index, setIndex] = useState(-1);
   const [storageImages, setStorageImages] = useState([]);
 
-  const getFirestoreImages = () => {
+  const getFirestoreImages = async () => {
     const listRef = ref(storage, `gs://vitaly-furniture.appspot.com/${productDetailsName}`);
     listAll(listRef)
       .then(res => {
@@ -63,30 +62,12 @@ const ProductDetails = observer(() => {
     }
   }, []);
 
-  // useEffect(() => {
-  //   if (product && product.images) {
-  //     setImages(product?.images?.map(item => ({ src: item.src })));
-  //   }
-  // }, [product]);
-
   return (
     <div className={styles.product_details}>
       <div className={styles.container}>
         <h2 className={styles.title}>{product?.productName}</h2>
         <p className={styles.discription}>{product?.title}</p>
         <ul className={styles.images_list}>
-          {/* {product &&
-            product.images &&
-            product.images.map((item, index) => (
-              <li className={styles.image_item} key={uuidv4()} onClick={() => setIndex(index)}>
-                <img
-                  className={styles.image}
-                  srcSet={`${item.srcset} 2x`}
-                  src={item.src}
-                  alt={product.productName + 'image'}
-                />
-              </li>
-            ))} */}
           {storageImages.length > 0 &&
             storageImages.map((item, index) => (
               <li className={styles.image_item} key={uuidv4()} onClick={() => setIndex(index)}>
@@ -103,14 +84,6 @@ const ProductDetails = observer(() => {
         slides={[...storageImages]}
         plugins={[Captions, Fullscreen, Slideshow, Video, Zoom]}
       />
-
-      {/* <Lightbox
-        index={index}
-        open={index >= 0}
-        close={() => setIndex(-1)}
-        slides={[...images]}
-        plugins={[Captions, Fullscreen, Slideshow, Video, Zoom]}
-      /> */}
     </div>
   );
 });

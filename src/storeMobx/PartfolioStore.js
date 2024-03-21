@@ -14,6 +14,7 @@ const BASE_URL = 'https://vitaly-furniture-default-rtdb.europe-west1.firebasedat
 
 class PartfolioStore {
   modal = false;
+  isLoading = false;
   products = [...productsArr];
   contactFormMassage = {};
   footerFormPhone = null;
@@ -21,6 +22,7 @@ class PartfolioStore {
   constructor() {
     makeObservable(this, {
       modal: observable,
+      isLoading: observable,
       products: observable,
       contactFormMassage: observable,
       footerFormPhone: observable,
@@ -59,7 +61,7 @@ class PartfolioStore {
     this.contactFormMassage = data;
     try {
       const response = axios.post(`${BASE_URL}userMessage/.json`, data);
-      toast(`Your message has been sent, please wait to contact you`, {
+      toast(`Thank you for your interest in our company. We will contact you within one working day.`, {
         theme: 'light',
       });
       return response;
@@ -72,7 +74,7 @@ class PartfolioStore {
     this.footerFormPhone = data;
     try {
       const response = axios.post(`${BASE_URL}callBackPhoneNumber/.json`, data);
-      toast(`Your message has been sent, please wait to contact you`, {
+      toast(`Thank you for your interest in our company. We will contact you within one working day.`, {
         theme: 'light',
       });
       return response;

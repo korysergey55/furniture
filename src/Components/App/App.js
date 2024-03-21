@@ -22,7 +22,7 @@ const NotFoundPage = lazy(() => import('../../Pages/notFoundPage/NotFoundPage'))
 
 const App = observer(() => {
   const { PartfolioStore } = useStore()
-  const { modal } = PartfolioStore
+  const { modal } = PartfolioStore;
   return (
     <div>
       <Headroom>
@@ -30,18 +30,17 @@ const App = observer(() => {
       </Headroom>
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path='/' element={<SharedLayout />} >
+          <Route path="/" element={<SharedLayout />}>
             <Route path={pathes.home} element={<HomePage />} />
             <Route path={pathes.about} element={<AboutUs />} />
             <Route path={pathes.process} element={<ProcessPage />} />
             <Route path={pathes.portfolio} element={<PortfolioPage />} />
             <Route path={`${pathes.portfolio}/:productDetailsName`} element={<ProductDetails />} />
             <Route path={pathes.contact} element={<ContactPage />} />
-            <Route path='*' element={<NotFoundPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </Suspense>
-      {/* <Loader /> */}
       {modal ? <MobileModalMenu /> : null}
     </div>
   );
