@@ -13,9 +13,9 @@ const FooterForm = observer(() => {
   }
 
   const handleSubmit = (evt) => {
-    evt.preventDefault()
-    PartfolioStore.setFooterFormPhoneAPI(state)
-    setState({ phoneNumber: '' })
+    evt.preventDefault();
+    PartfolioStore.setFooterFormPhoneAPI(state);
+    setState({ phoneNumber: '' });
   }
 
   return (
