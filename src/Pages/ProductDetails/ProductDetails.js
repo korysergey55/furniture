@@ -8,7 +8,7 @@ import { toJS } from 'mobx';
 import { ref, getDownloadURL, listAll } from 'firebase/storage';
 import { storage } from '../../Firabase/firabase';
 
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
 import Lightbox from 'yet-another-react-lightbox';
@@ -21,6 +21,7 @@ import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 const ProductDetails = observer(() => {
   const { productDetailsName } = useParams();
   const { PartfolioStore } = useStore();
+  const navigate = useNavigate();
 
   const [product, setProduct] = useState({});
   const [index, setIndex] = useState(-1);
@@ -65,6 +66,9 @@ const ProductDetails = observer(() => {
   return (
     <div className={styles.product_details}>
       <div className={styles.container}>
+        <h2 className={styles.product_path} onClick={() => navigate('/portfolio')}>
+          Portfolio-{product.path}
+        </h2>
         <h2 className={styles.title}>{product?.productName}</h2>
         <p className={styles.discription}>{product?.title}</p>
         <ul className={styles.images_list}>
