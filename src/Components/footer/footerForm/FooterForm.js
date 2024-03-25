@@ -12,11 +12,11 @@ const FooterForm = observer(() => {
     setState({ phoneNumber: evt.target.value })
   }
 
-  const handleSubmit = (evt) => {
+  const handleSubmit = async evt => {
     evt.preventDefault();
-    PartfolioStore.setFooterFormPhoneAPI(state);
+    const responce = await PartfolioStore.setFooterFormPhoneAPI(state);
     setState({ phoneNumber: '' });
-  }
+  };
 
   return (
     <form className={styles.footerForm} id='footer-form' onSubmit={handleSubmit}>

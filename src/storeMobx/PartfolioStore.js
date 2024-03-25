@@ -6,9 +6,10 @@ import {
   reaction,
   toJS,
 } from 'mobx';
+import { db } from '../Firabase/firabase';
 import { toast } from 'react-toastify';
-
 import { productsArr } from '../sourses/products/products';
+import { collection, addDoc } from 'firebase/firestore';
 
 class PartfolioStore {
   modal = false;
@@ -58,7 +59,19 @@ class PartfolioStore {
   setUserMessageAPI = async data => {
     this.contactFormMassage = data;
     try {
-      const response = axios.post(`${process.env.REACT_APP_BASE_URL}userMessage/.json`, data);
+      // const response = axios.post(`${process.env.REACT_APP_BASE_URL}userMessage/.json`, data);
+      // return response;
+
+      const response = await addDoc(collection(db, 'mail'), {
+        to: 'korysergey55@gmail.com',
+        message: {
+          subject: `You are resive massage from ${data.email}`,
+          text: data.message,
+          html: `You are resive massage from ${data.email} 
+          .First name - ${data.firstName}. Last name - ${data.lastName}. Massage ${data.message}`,
+        },
+      });
+
       toast(`Thank you for your interest in our company. We will contact you within one working day.`, {
         theme: 'light',
       });
@@ -71,7 +84,18 @@ class PartfolioStore {
   setFooterFormPhoneAPI = async data => {
     this.footerFormPhone = data;
     try {
-      const response = axios.post(`${process.env.REACT_APP_BASE_URL}callBackPhoneNumber/.json`, data);
+      // const response = axios.post(`${process.env.REACT_APP_BASE_URL}callBackPhoneNumber/.json`, data);
+      // return response;
+
+      const response = await addDoc(collection(db, 'mail'), {
+        to: 'korysergey55@gmail.com',
+        message: {
+          subject: `You are resive call beck request from ${data.phoneNumber}`,
+          text: `You are resive call beck request from ${data.phoneNumber}`,
+          html: `You are resive call beck request from ${data.phoneNumber}`,
+        },
+      });
+
       toast(`Thank you for your interest in our company. We will contact you within one working day.`, {
         theme: 'light',
       });
