@@ -10,8 +10,6 @@ import { toast } from 'react-toastify';
 
 import { productsArr } from '../sourses/products/products';
 
-const BASE_URL = 'https://vitaly-furniture-default-rtdb.europe-west1.firebasedatabase.app/';
-
 class PartfolioStore {
   modal = false;
   isLoading = false;
@@ -60,7 +58,7 @@ class PartfolioStore {
   setUserMessageAPI = async data => {
     this.contactFormMassage = data;
     try {
-      const response = axios.post(`${BASE_URL}userMessage/.json`, data);
+      const response = axios.post(`${process.env.REACT_APP_BASE_URL}userMessage/.json`, data);
       toast(`Thank you for your interest in our company. We will contact you within one working day.`, {
         theme: 'light',
       });
@@ -73,7 +71,7 @@ class PartfolioStore {
   setFooterFormPhoneAPI = async data => {
     this.footerFormPhone = data;
     try {
-      const response = axios.post(`${BASE_URL}callBackPhoneNumber/.json`, data);
+      const response = axios.post(`${process.env.REACT_APP_BASE_URL}callBackPhoneNumber/.json`, data);
       toast(`Thank you for your interest in our company. We will contact you within one working day.`, {
         theme: 'light',
       });
@@ -86,7 +84,7 @@ class PartfolioStore {
   setAllProductsAPI = async (data = []) => {
     data = [...productsArr];
     try {
-      const response = axios.post(`${BASE_URL}products/.json`, data);
+      const response = axios.post(`${process.env.REACT_APP_BASE_URL}products/.json`, data);
       return response;
     } catch (error) {
       throw new Error(error);
