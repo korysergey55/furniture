@@ -1,11 +1,15 @@
-import * as React from 'react'
-import { useNavigate } from 'react-router'
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router';
 
-import styles from './styles.module.scss'
-import notFoundImg from '../../sourses/images/404/404.jpg'
+import styles from './styles.module.scss';
+import notFoundImg from '../../sourses/images/404/404.jpg';
 
 const NotFoundPage = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/home');
+  }, []);
   return (
     <div className={styles.container}>
       <div className={styles.wripper}>
@@ -22,6 +26,6 @@ const NotFoundPage = () => {
       </div>
     </div>
   );
-}
+};
 
-export default NotFoundPage
+export default NotFoundPage;

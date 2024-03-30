@@ -9,7 +9,7 @@ import { getFirestore } from 'firebase/firestore';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: 'AIzaSyD-jNjtGR87RAh2Jn1Rz6UzhFiGrKyWDNc',
+  apiKey: process.env.REACT_APP_API_KEY,
   authDomain: 'vitaly-furniture.firebaseapp.com',
   databaseURL: 'https://vitaly-furniture-default-rtdb.europe-west1.firebasedatabase.app',
   projectId: 'vitaly-furniture',

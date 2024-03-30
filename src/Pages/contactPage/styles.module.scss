@@ -1,5 +1,7 @@
 @import '../../sourses/styles/variebles.scss';
 .contacts_page {
+  flex: 1;
+  min-height: 100vh;
   .container {
     padding: 40px 15px;
     .title {
