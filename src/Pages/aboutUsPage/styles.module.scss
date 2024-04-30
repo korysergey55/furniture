@@ -1,6 +1,16 @@
+@import '../../sourses/styles/variebles.scss';
 .about_us {
   display: flex;
   flex-direction: column;
+
+  .hero {
+    width: 100%;
+    height: 300px;
+    background-image: url(../../sourses/images/products/bespoke/bespoke-image-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 .container {
   display: flex;
@@ -14,27 +24,108 @@
 
   margin: 0 auto;
   padding: 50px 15px;
-  .title {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: 0.03em;
+
+  .contentWripper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    .wripper {
+      .title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: 0.03em;
+        text-align: center;
+      }
+
+      .discription {
+        min-width: 320px;
+        max-width: 750px;
+        margin-top: 20px;
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.9;
+        letter-spacing: 0.05em;
+        text-align: center;
+      }
+    }
+    .imageContainer {
+      width: 100%;
+      max-width: 600px;
+      max-height: 700px;
+      border-radius: 7px;
+      overflow: hidden;
+
+      .image {
+        // max-width: 600px;
+      }
+    }
+  }
+  .subtitle {
+    margin-top: 40px;
     text-align: center;
   }
-  .discription {
-    max-width: 1200px;
+  .iconsList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.7;
-    letter-spacing: 0.05em;
+    .icon {
+      width: 100px;
+    }
+  }
+  .bookingWripper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    gap: 40px;
+
     text-align: center;
+
+    .button {
+      padding: 0 20px;
+      color: white;
+    }
   }
 }
-@media screen and(min-width:768px) {
-  .container {
-    .discription {
-      text-align: left;
+@media screen and (min-width: 768px) {
+  .about_us {
+    .hero {
+      background-image: url(../../sourses/images/products/bespoke/bespoke-image-2.jpg);
+      height: 500px;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .container {
+      .contentWripper {
+        flex-wrap: nowrap;
+        .wripper {
+          .discription {
+            margin-top: 40px;
+            text-align: left;
+          }
+        }
+        .imageContainer {
+          .image {
+          }
+        }
+      }
+      .iconsList {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        .icon {
+          width: auto;
+        }
+      }
     }
   }
 }

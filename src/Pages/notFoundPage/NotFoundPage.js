@@ -9,7 +9,8 @@ const NotFoundPage = () => {
 
   useEffect(() => {
     navigate('/home');
-  }, []);
+  }, [navigate]);
+  
   return (
     <div className={styles.container}>
       <div className={styles.wripper}>

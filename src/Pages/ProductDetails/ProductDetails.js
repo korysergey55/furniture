@@ -27,6 +27,7 @@ const ProductDetails = observer(() => {
   const [index, setIndex] = useState(-1);
   const [storageImages, setStorageImages] = useState([]);
 
+
   const getFirestoreImages = async () => {
     const listRef = ref(storage, `gs://vitaly-furniture.appspot.com/${productDetailsName}`);
     listAll(listRef)

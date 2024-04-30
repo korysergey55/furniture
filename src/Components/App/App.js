@@ -1,9 +1,9 @@
-import React, { Suspense, lazy } from 'react'
+import React, { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { observer } from 'mobx-react'
+import { observer } from 'mobx-react';
 import { useStore } from '../../storeMobx';
-import { pathes } from '../../utiles/pathes/pathes'
+import { pathes } from '../../utiles/pathes/pathes';
 
 import Header from '../header/Header';
 import Headroom from 'react-headroom';
@@ -11,17 +11,17 @@ import Headroom from 'react-headroom';
 import MobileModalMenu from '../MobileModalMenu/MobileModalMenu';
 import Loader from '../loader/Loader';
 
-const SharedLayout = lazy(() => import('../../Components/SharedLayout/SharedLayout'))
-const HomePage = lazy(() => import('../../Pages/homePage/HomePage'))
-const AboutUs = lazy(() => import('../../Pages/aboutUsPage/AboutUsPage'))
-const ProcessPage = lazy(() => import('../../Pages/processPage/ProcessPage'))
-const PortfolioPage = lazy(() => import('../../Pages/portfolioPage/PortfolioPage'))
-const ContactPage = lazy(() => import('../../Pages/contactPage/ContactPage'))
-const ProductDetails = lazy(() => import('../../Pages/ProductDetails/ProductDetails'))
-const NotFoundPage = lazy(() => import('../../Pages/notFoundPage/NotFoundPage'))
+const SharedLayout = lazy(() => import('../../Components/SharedLayout/SharedLayout'));
+const HomePage = lazy(() => import('../../Pages/homePage/HomePage'));
+const AboutUs = lazy(() => import('../../Pages/aboutUsPage/AboutUsPage'));
+const ProcessPage = lazy(() => import('../../Pages/processPage/ProcessPage'));
+const PortfolioPage = lazy(() => import('../../Pages/portfolioPage/PortfolioPage'));
+const ContactPage = lazy(() => import('../../Pages/contactPage/ContactPage'));
+const ProductDetails = lazy(() => import('../../Pages/ProductDetails/ProductDetails'));
+const NotFoundPage = lazy(() => import('../../Pages/notFoundPage/NotFoundPage'));
 
 const App = observer(() => {
-  const { PartfolioStore } = useStore()
+  const { PartfolioStore } = useStore();
   const { modal } = PartfolioStore;
   return (
     <div>
@@ -44,6 +44,6 @@ const App = observer(() => {
       {modal ? <MobileModalMenu /> : null}
     </div>
   );
-})
+});
 
 export default App;
