@@ -131,7 +131,7 @@
   .footer {
     .container {
       display: flex;
-        justify-content: space-around;
+      justify-content: space-around;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 40px;
@@ -180,7 +180,7 @@
         align-items: flex-start;
         gap: 10px;
 
-        .link{
+        .link {
           font-weight: 450;
         }
       }

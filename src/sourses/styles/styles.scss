@@ -50,19 +50,25 @@ img {
 }
 button {
   height: 50px;
-  padding: 0 10px;
+  padding: 5px 20px;
+
   font-size: 17px;
   font-weight: 600;
   text-align: center;
   border-radius: 7px;
-  border: none;
+  border: transparent;
 
   color: $activeColor;
   background-color: $brandBgColor;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+
+  transition:
+    background-color 0.35s ease-in-out,
+    color 0.35s ease-in-out;
 
   &:hover {
     cursor: pointer;
-    opacity: 0.7;
+    background-color: $blueActive;
+    color: white;
   }
 }

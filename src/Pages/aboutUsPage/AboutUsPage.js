@@ -57,7 +57,7 @@ const AboutUs = () => {
         </ul>
         <div className={styles.bookingWripper}>
           <button className={styles.button} type="button" onClick={() => navigate(`${pathes.contact}`)}>
-            Book A Consultation
+            Book Consultation
           </button>
           <h2 className={styles.title}>Booking is Easy, Free, and there’s No Obligation</h2>
         </div>

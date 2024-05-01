@@ -37,7 +37,7 @@
         font-weight: 400;
         line-height: 1.9;
         letter-spacing: 0.05em;
-        text-align: left;
+        text-align: center;
       }
       .link {
         font-size: 18px;
@@ -76,6 +76,9 @@
       .wripper {
         .title {
           margin: 0;
+        }
+        .discription {
+          text-align: left;
         }
       }
     }

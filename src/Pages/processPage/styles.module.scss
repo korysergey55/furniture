@@ -1,3 +1,4 @@
+@import '../../sourses/styles/variebles.scss';
 .container {
   margin: 0 auto;
   padding: 50px 15px;
@@ -59,6 +60,23 @@
       }
     }
   }
+  .bookingWripper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 40px;
+    text-align: center;
+
+    border: 1px dotted $brandColor;
+    border-radius: 10px;
+    padding: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -80,6 +98,13 @@
           max-width: 400px;
         }
       }
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    .bookingWripper {
+      width: 1200px;
     }
   }
 }

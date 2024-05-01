@@ -32,6 +32,9 @@
     flex-wrap: wrap;
     gap: 40px;
 
+    padding-bottom: 50px;
+    border-bottom: 1px solid $brandColor;
+
     .wripper {
       .title {
         font-size: 36px;
@@ -42,7 +45,6 @@
       }
 
       .discription {
-        min-width: 320px;
         max-width: 750px;
         margin-top: 20px;
 
@@ -61,7 +63,6 @@
       overflow: hidden;
 
       .image {
-        // max-width: 600px;
       }
     }
   }
@@ -88,11 +89,13 @@
     flex-direction: column-reverse;
     gap: 40px;
 
-    text-align: center;
+    width: 100%;
 
-    .button {
-      padding: 0 20px;
-      color: white;
+    text-align: center;
+    border-top: 1px solid $brandColor;
+
+    .title {
+      margin-top: 40px;
     }
   }
 }
@@ -108,8 +111,10 @@
     .container {
       .contentWripper {
         flex-wrap: nowrap;
+        padding-bottom: 100px;
         .wripper {
           .discription {
+            min-width: 320px;
             margin-top: 40px;
             text-align: left;
           }

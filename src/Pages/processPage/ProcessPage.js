@@ -1,4 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
+import { pathes } from '../../utiles/pathes/pathes';
+
 import styles from './styles.module.scss';
 
 import developmentImage from '../../sourses/images/process/development-image.jpg';
@@ -9,6 +12,7 @@ import instaletionImage from '../../sourses/images/process/instaletion-image.jpg
 import instaletionImage2x from '../../sourses/images/process/instaletion-image@2x.webp';
 
 const ProcessPage = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Our cooperation with clients consists of three main stages</h2>
@@ -63,6 +67,12 @@ const ProcessPage = () => {
           </div>
         </li>
       </ul>
+      <div className={styles.bookingWripper}>
+        <button className={styles.button} type="button" onClick={() => navigate(`${pathes.contact}`)}>
+          Book Consultation
+        </button>
+        <h2 className={styles.title}>Booking is Easy, Free, and there’s No Obligation</h2>
+      </div>
     </div>
   );
 };
