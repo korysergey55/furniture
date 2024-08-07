@@ -7,10 +7,10 @@ import notFoundImg from '../../sourses/images/404/404.jpg';
 const NotFoundPage = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    navigate('/home');
-  }, [navigate]);
-  
+  // useEffect(() => {
+  //   navigate('/home');
+  // }, [navigate]);
+
   return (
     <div className={styles.container}>
       <div className={styles.wripper}>
@@ -20,7 +20,7 @@ const NotFoundPage = () => {
           <p className={styles.text}>
             The link you're trying to access is probably broken, or the page has been removed.
           </p>
-          <button type="button" className={styles.buttonBackHome} onClick={() => navigate('/')}>
+          <button type="button" className={styles.buttonBackHome} onClick={() => navigate('/home')}>
             Back to home
           </button>
         </div>

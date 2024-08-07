@@ -1,11 +1,5 @@
 import axios from 'axios';
-import {
-  makeObservable,
-  observable,
-  action,
-  reaction,
-  toJS,
-} from 'mobx';
+import { makeObservable, observable, action, reaction, toJS } from 'mobx';
 import { db } from '../Firabase/firabase';
 import { collection, addDoc } from 'firebase/firestore';
 
@@ -73,9 +67,12 @@ class PartfolioStore {
         },
       });
 
-      toast(`Thank you for your interest in our company. We will contact you within one working day.`, {
-        theme: 'light',
-      });
+      toast(
+        `Thank you for your interest in our company. We will contact you within one working day.`,
+        {
+          theme: 'light',
+        }
+      );
       return response;
     } catch (error) {
       throw new Error(error);
@@ -97,9 +94,12 @@ class PartfolioStore {
         },
       });
 
-      toast(`Thank you for your interest in our company. We will contact you within one working day.`, {
-        theme: 'light',
-      });
+      toast(
+        `Thank you for your interest in our company. We will contact you within one working day.`,
+        {
+          theme: 'light',
+        }
+      );
       return response;
     } catch (error) {
       throw new Error(error);

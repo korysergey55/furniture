@@ -53,11 +53,13 @@
   }
 
   .modal_close_button {
-    display: block;
-    background-color: transparent;
     position: absolute;
     top: 5%;
     right: 5%;
+
+    display: block;
+    background-color: transparent;
+    border: none;
 
     .icon {
       width: 25px;

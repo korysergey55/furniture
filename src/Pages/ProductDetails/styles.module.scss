@@ -3,8 +3,7 @@
   flex-direction: column;
 
   .product_path {
-    // font-weight: 400;
-    text-decoration:underline;
+    text-decoration: underline;
 
     &:hover {
       cursor: pointer;
@@ -65,10 +64,9 @@
     }
   }
 }
-@media screen and (min-width:768px) {
-  .product_details{
-
-    .product_path{
+@media screen and (min-width: 768px) {
+  .product_details {
+    .product_path {
       display: none;
     }
   }

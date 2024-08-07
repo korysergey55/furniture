@@ -17,19 +17,20 @@ const AboutUs = () => {
           <div className={styles.wripper}>
             <h2 className={styles.title}>About Us</h2>
             <p className={styles.discription}>
-              Vitaly furniture is a small family business that was founded in 2017. Our commitment to innovation in
-              production is the key to the best quality product. We have implemented many projects developed in
-              collaboration with our in-house designers and architects.
+              Vitaly furniture is a small family business that was founded in 2017. Our commitment
+              to innovation in production is the key to the best quality product. We have
+              implemented many projects developed in collaboration with our in-house designers and
+              architects.
               <br />
               <br />
-              We are a bespoke furniture & joinery company, that prides ourselves on providing only the very best
-              quality products and service to our clients. From design to installation we take care of everything
-              ensuring impeccable quality for both product and service. Services Provided 3D design and interior design
-              Free standing and fitted furniture.
+              We are a bespoke furniture & joinery company, that prides ourselves on providing only
+              the very best quality products and service to our clients. From design to installation
+              we take care of everything ensuring impeccable quality for both product and service.
+              Services Provided 3D design and interior design Free standing and fitted furniture.
               <br />
               <br />
-              First, second and final fix joinery. Areas Served Cheshire, Manchester mainly but also nationwide in the
-              private and commercial sector.
+              First, second and final fix joinery. Areas Served Cheshire, Manchester mainly but also
+              nationwide in the private and commercial sector.
             </p>
           </div>
           <div className={styles.imageContainer}>
@@ -41,22 +42,26 @@ const AboutUs = () => {
         <ul className={styles.iconsList}>
           <li className={styles.item}>
             <svg className={styles.icon} aria-label="icon">
-              <use href={sprite + '#icon-7-years'}></use>
+              <use href={sprite + '#icon-7-years'} />
             </svg>
           </li>
           <li className={styles.item}>
             <svg className={styles.icon} aria-label="icon">
-              <use href={sprite + '#icon-guarantee-5'}></use>
+              <use href={sprite + '#icon-guarantee-5'} />
             </svg>
           </li>
           <li className={styles.item}>
             <svg className={styles.icon} aria-label="icon">
-              <use href={sprite + '#icon-free-design'}></use>
+              <use href={sprite + '#icon-free-design'} />
             </svg>
           </li>
         </ul>
         <div className={styles.bookingWripper}>
-          <button className={styles.button} type="button" onClick={() => navigate(`${pathes.contact}`)}>
+          <button
+            className={styles.button}
+            type="button"
+            onClick={() => navigate(`${pathes.contact}`)}
+          >
             Book Consultation
           </button>
           <h2 className={styles.title}>Booking is Easy, Free, and there’s No Obligation</h2>

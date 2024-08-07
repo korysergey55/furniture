@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import styles from './styles.module.scss'
+import React, { useEffect, useState } from 'react';
+import styles from './styles.module.scss';
 
 import { observer } from 'mobx-react';
 import { useStore } from '../../storeMobx';
@@ -26,7 +26,6 @@ const ProductDetails = observer(() => {
   const [product, setProduct] = useState({});
   const [index, setIndex] = useState(-1);
   const [storageImages, setStorageImages] = useState([]);
-
 
   const getFirestoreImages = async () => {
     const listRef = ref(storage, `gs://vitaly-furniture.appspot.com/${productDetailsName}`);
@@ -70,8 +69,10 @@ const ProductDetails = observer(() => {
         <h2 className={styles.product_path} onClick={() => navigate('/portfolio')}>
           Portfolio-{product.path}
         </h2>
-        <h2 className={styles.title}>{product?.productName}</h2>
-        <p className={styles.discription}>{product?.title}</p>
+        <div className={styles.title_vripper}>
+          <h2 className={styles.title}>{product?.productName}</h2>
+          <p className={styles.discription}>{product?.title}</p>
+        </div>
         <ul className={styles.images_list}>
           {storageImages.length > 0 &&
             storageImages.map((item, index) => (

@@ -1,38 +1,37 @@
-import React, { useEffect } from 'react'
-import { observer } from 'mobx-react'
-import { useStore } from '../../storeMobx'
+import React, { useEffect } from 'react';
+import { observer } from 'mobx-react';
+import { useStore } from '../../storeMobx';
 
-import { NavLink, useLocation } from 'react-router-dom'
-import { pathes } from '../../utiles/pathes/pathes'
-import scrollController from '../../utiles/scrollController/scrollController'
+import { NavLink, useLocation } from 'react-router-dom';
+import { pathes } from '../../utiles/pathes/pathes';
+import scrollController from '../../utiles/scrollController/scrollController';
 
-import styles from './styles.module.scss'
-import sprite from '../../sourses/icons/sprite.svg'
-import classnames from 'classnames'
+import styles from './styles.module.scss';
+import sprite from '../../sourses/icons/sprite.svg';
+import classnames from 'classnames';
 
 const Header = observer(() => {
-  const { PartfolioStore } = useStore()
-  const { modal } = PartfolioStore
-  const location = useLocation()
+  const { PartfolioStore } = useStore();
+  const { modal } = PartfolioStore;
+  const location = useLocation();
 
   useEffect(() => {
     if (modal) {
-      scrollController.disabledScroll()
+      scrollController.disabledScroll();
+    } else {
+      scrollController.enabledScroll();
     }
-    else {
-      scrollController.enabledScroll()
-    }
-  }, [modal])
+  }, [modal]);
 
   useEffect(() => {
     setTimeout(() => {
-      window.scroll({ top: 0 })
-    }, 10)
-  }, [location.pathname])
+      window.scroll({ top: 0 });
+    }, 10);
+  }, [location.pathname]);
 
   const handleMobileMenu = () => {
-    PartfolioStore.setModal()
-  }
+    PartfolioStore.setModal();
+  };
 
   return (
     <div className={styles.header}>
@@ -52,7 +51,7 @@ const Header = observer(() => {
           <li className={styles.item}>
             <NavLink
               to={pathes.home}
-              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+              className={navData => (navData.isActive ? styles.active : styles.nav_link)}
             >
               Home
             </NavLink>
@@ -60,7 +59,7 @@ const Header = observer(() => {
           <li className={styles.item}>
             <NavLink
               to={pathes.about}
-              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+              className={navData => (navData.isActive ? styles.active : styles.nav_link)}
             >
               About
             </NavLink>
@@ -68,7 +67,7 @@ const Header = observer(() => {
           <li className={styles.item}>
             <NavLink
               to={pathes.process}
-              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+              className={navData => (navData.isActive ? styles.active : styles.nav_link)}
             >
               Process
             </NavLink>
@@ -76,7 +75,7 @@ const Header = observer(() => {
           <li className={styles.item}>
             <NavLink
               to={pathes.portfolio}
-              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+              className={navData => (navData.isActive ? styles.active : styles.nav_link)}
             >
               Portfolio
             </NavLink>
@@ -84,7 +83,7 @@ const Header = observer(() => {
           <li className={styles.item}>
             <NavLink
               to={pathes.contact}
-              className={(navData) => navData.isActive ? styles.active : styles.nav_link}
+              className={navData => (navData.isActive ? styles.active : styles.nav_link)}
             >
               Contact
             </NavLink>
@@ -95,17 +94,20 @@ const Header = observer(() => {
             [styles.button_menu_hamburger]: true,
             [styles.button_menu_hamburger_dasable]: modal,
           })}
-          onClick={handleMobileMenu}>
-          <svg className={styles.icon_menu_hamburger}
+          onClick={handleMobileMenu}
+        >
+          <svg
+            className={styles.icon_menu_hamburger}
             width="30"
             height="30"
-            aria-label="mobile menu icon">
+            aria-label="mobile menu icon"
+          >
             <use href={sprite + '#icon-menu-hamburger'}></use>
           </svg>
         </button>
       </div>
-    </div >
+    </div>
   );
-})
+});
 
 export default Header;
