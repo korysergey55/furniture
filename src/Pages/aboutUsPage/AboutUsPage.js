@@ -1,11 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { pathes } from '../../utiles/pathes/pathes';
+
 import FeaturesList from '../../Components/featuresList/FeaturesList';
+import Services from '../../Components/services/Services';
+import BookConsultation from '../../Components/bookConsultation/BookConsultation';
 
 import styles from './styles.module.scss';
 import iamgeOvner from '../../sourses/images/aboutUs/ovnerImage.jpg';
-import sprite from '../../sourses/icons/sprite.svg';
 
 const AboutUs = () => {
   const navigate = useNavigate();
@@ -32,40 +34,17 @@ const AboutUs = () => {
               First, second and final fix joinery. Areas Served Cheshire, Manchester mainly but also
               nationwide in the private and commercial sector.
             </p>
+            <a className={styles.link} onClick={() => navigate(pathes.contact)}>
+              Get A Quote &#x2192;
+            </a>
           </div>
           <div className={styles.imageContainer}>
             <img className={styles.image} src={iamgeOvner} alt="High quality installations" />
           </div>
         </div>
         <FeaturesList />
-        <h2 className={styles.subtitle}>We Provide You The Best Experience</h2>
-        <ul className={styles.iconsList}>
-          <li className={styles.item}>
-            <svg className={styles.icon} aria-label="icon">
-              <use href={sprite + '#icon-7-years'} />
-            </svg>
-          </li>
-          <li className={styles.item}>
-            <svg className={styles.icon} aria-label="icon">
-              <use href={sprite + '#icon-guarantee-5'} />
-            </svg>
-          </li>
-          <li className={styles.item}>
-            <svg className={styles.icon} aria-label="icon">
-              <use href={sprite + '#icon-free-design'} />
-            </svg>
-          </li>
-        </ul>
-        <div className={styles.bookingWripper}>
-          <button
-            className={styles.button}
-            type="button"
-            onClick={() => navigate(`${pathes.contact}`)}
-          >
-            Book Consultation
-          </button>
-          <h2 className={styles.title}>Booking is Easy, Free, and there’s No Obligation</h2>
-        </div>
+        <Services />
+        <BookConsultation />
       </div>
     </div>
   );

@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import styles from './styles.module.scss';
-
 import { observer } from 'mobx-react';
 import { useStore } from '../../storeMobx';
 import { toJS } from 'mobx';
 
-import { ref, getDownloadURL, listAll } from 'firebase/storage';
-import { storage } from '../../Firabase/firabase';
-
 import { useNavigate, useParams } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
+import { ref, getDownloadURL, listAll } from 'firebase/storage';
+import { storage } from '../../Firabase/firabase';
+
+import BookConsultation from '../../Components/bookConsultation/BookConsultation';
+import styles from './styles.module.scss';
 import Lightbox from 'yet-another-react-lightbox';
 import Captions from 'yet-another-react-lightbox/plugins/captions';
 import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen';
@@ -81,6 +81,7 @@ const ProductDetails = observer(() => {
               </li>
             ))}
         </ul>
+        {storageImages.length > 0 && <BookConsultation />}
       </div>
 
       <Lightbox

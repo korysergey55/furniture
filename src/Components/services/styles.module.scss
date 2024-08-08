@@ -1,0 +1,29 @@
+@import '../../sourses/styles/variebles.scss';
+.services_wripper {
+  padding-top: 40px;
+  .title {
+    text-align: center;
+  }
+  .iconsList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .icon {
+      width: 100px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .services_wripper {
+    .iconsList {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      .icon {
+        width: auto;
+      }
+    }
+  }
+}
