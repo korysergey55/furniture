@@ -26,9 +26,9 @@ const FeaturesList = () => {
             optimise your interior design, get in touch. Our designs are tailored to help you make
             the most of your space.
           </p>
-          <a className={styles.link} onClick={() => navigate(pathes.contact)}>
+          <p className={styles.link} onClick={() => navigate(pathes.contact)}>
             Get A Quote &#x2192;
-          </a>
+          </p>
         </div>
       </li>
 
@@ -42,9 +42,9 @@ const FeaturesList = () => {
             above and beyond at every step in the design and installation process to make sure your
             new furniture meets both your practical needs and your personal tastes.
           </p>
-          <a className={styles.link} onClick={() => navigate(pathes.contact)}>
+          <p className={styles.link} onClick={() => navigate(pathes.contact)}>
             Get A Quote &#x2192;
-          </a>
+          </p>
         </div>
         <div className={styles.imageContainer}>
           <img src={iamge2} alt="High quality installations" className={styles.image} />
@@ -67,9 +67,9 @@ const FeaturesList = () => {
             usable areas is our specialty. As a result our customers gain an average of 25% more
             storage space, delivering great value for money.
           </p>
-          <a className={styles.link} onClick={() => navigate(pathes.contact)}>
+          <p className={styles.link} onClick={() => navigate(pathes.contact)}>
             Get A Quote &#x2192;
-          </a>
+          </p>
         </div>
       </li>
 
@@ -85,9 +85,9 @@ const FeaturesList = () => {
             Vitaly furniture, we have over 8 years designing stunning bespoke fitted kitchens in
             Berkshire, Hampshire, Surrey and surrounding local areas.
           </p>
-          <a className={styles.link} onClick={() => navigate(pathes.contact)}>
+          <p className={styles.link} onClick={() => navigate(pathes.contact)}>
             Get A Quote &#x2192;
-          </a>
+          </p>
         </div>
         <div className={styles.imageContainer}>
           <img src={iamge3} alt="Bespoke Fitted Kitchens" className={styles.image} />

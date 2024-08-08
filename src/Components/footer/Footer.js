@@ -1,15 +1,14 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import { contactInfo } from '../../utiles/contactInfo/contactInfo'
-import { pathes } from '../../utiles/pathes/pathes'
-import FooterForm from './footerForm/FooterForm'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { contactInfo } from '../../utiles/contactInfo/contactInfo';
+import { pathes } from '../../utiles/pathes/pathes';
+import FooterForm from './footerForm/FooterForm';
 
-import InstaIcon from '../icons/InstaIcon'
-import styles from './styles.module.scss'
-import sprite from '../../sourses/icons/sprite.svg'
+import InstaIcon from '../icons/InstaIcon';
+import styles from './styles.module.scss';
+import sprite from '../../sourses/icons/sprite.svg';
 
 const Footer = () => {
-
   const width = window.screen.width >= 768;
   return (
     <div className={styles.footer}>
@@ -37,7 +36,12 @@ const Footer = () => {
             </a>
           </li>
           <li className={styles.item}>
-            <a className={styles.link} href={`mailto:${contactInfo.email}`} target="_blank" rel="noopener noreferrer">
+            <a
+              className={styles.link}
+              href={`mailto:${contactInfo.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {' '}
               <svg className={styles.icon} aria-label="email icon">
                 <use href={sprite + '#icon-email'}></use>
@@ -46,7 +50,12 @@ const Footer = () => {
             </a>
           </li>
           <li className={styles.item}>
-            <a className={styles.link} href={contactInfo.location} target="_blank" rel="noopener noreferrer">
+            <a
+              className={styles.link}
+              href={contactInfo.location}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {' '}
               <svg className={styles.icon} aria-label="location icon">
                 <use href={sprite + '#icon-location'}></use>
@@ -65,12 +74,22 @@ const Footer = () => {
           <h3 className={styles.social_title}>Follow us</h3>
           <ul className={styles.social_list}>
             <li className={styles.item}>
-              <a className={styles.link} href={contactInfo.instagram} target="_blank" rel="noopener noreferrer">
+              <a
+                className={styles.link}
+                href={contactInfo.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <InstaIcon wedth="30" height="30" />
               </a>
             </li>
             <li className={styles.item}>
-              <a className={styles.link} href={contactInfo.facebook} target="_blank" rel="noopener noreferrer">
+              <a
+                className={styles.link}
+                href={contactInfo.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg className={styles.icon} width="32" height="32" aria-label="facebook icon">
                   <use href={sprite + '#icon-facebook'}></use>
                 </svg>
@@ -84,6 +103,6 @@ const Footer = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

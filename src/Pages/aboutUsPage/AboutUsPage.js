@@ -34,9 +34,9 @@ const AboutUs = () => {
               First, second and final fix joinery. Areas Served Cheshire, Manchester mainly but also
               nationwide in the private and commercial sector.
             </p>
-            <a className={styles.link} onClick={() => navigate(pathes.contact)}>
+            <p className={styles.link} onClick={() => navigate(pathes.contact)}>
               Get A Quote &#x2192;
-            </a>
+            </p>
           </div>
           <div className={styles.imageContainer}>
             <img className={styles.image} src={iamgeOvner} alt="High quality installations" />

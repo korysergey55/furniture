@@ -7,9 +7,9 @@ import notFoundImg from '../../sourses/images/404/404.jpg';
 const NotFoundPage = () => {
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   navigate('/home');
-  // }, [navigate]);
+  useEffect(() => {
+    navigate('/home');
+  }, [navigate]);
 
   return (
     <div className={styles.container}>
